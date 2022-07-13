@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Home Page
+{% endblock title %}
+    {% block others %}
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+            extend: {
+                fontFamily: {
+                inter: ['Inter']
+                },
+                aspectRatio: {
+                '4/3': '4 / 3',
+                '7/6': '7 / 6',
+                },
+            }
+            }
+        }
+    </script>
+    {% endblock others %}
+
+{% block content %}
+<div class="w-full h-full bg-slate-300">
+    Testing
+</div>
+{% endblock content %}
