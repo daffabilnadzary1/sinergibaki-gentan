@@ -1,0 +1,34 @@
+{% load static %}
+
+<div class="w-screen h-[80px] px-[30px] py-[10px]">
+    <div class="justify-between flex w-auto h-full items-center">
+        <div class="w-auto h-full flex items-center">
+            <a href="#" class = "h-full">
+                <img src="{% static 'logo/logo_desagentan.png' %}" alt="">
+            </a>
+            <h1 class="ml-[40px] font-inter font-bold text-[20px] text-[#F33737]">
+                Home
+            </h1>
+            <h1 class="ml-[20px] font-inter font-medium text-[20px] text-[#6C6C6C]">
+                Profil
+            </h1>
+            <h1 class="ml-[20px] font-inter font-medium text-[20px] text-[#6C6C6C]">
+                Layanan
+            </h1>
+            <h1 class="ml-[20px] font-inter font-medium text-[20px] text-[#6C6C6C]">
+                Desa
+            </h1>
+        </div>
+        <input
+            type="search"
+
+            class="py-[10px] pl-[20px] h-auto w-1/4 border-soft_grey border-[2px] rounded-[15px]
+            placeholder:text-[18px] placeholder:font-inter transition ease-in-out m-0 placeholder:font-medium
+            placeholder:text-[#BFBFBF] focus:text-gray-700 focus:bg-white focus:border-[#F33737]
+            focus: font-inter focus:outline-none focus:text-[16px] "
+
+            id="exampleSearch"
+            placeholder="Cari..."
+        />
+    </div>
+</div>
