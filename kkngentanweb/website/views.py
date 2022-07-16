@@ -5,3 +5,7 @@ from django.views import View
 class Home(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'homepage.html')
+
+class Activity(View):
+    def get(self, request,*args, **kwargs):
+        return render(request, 'activities.html')
