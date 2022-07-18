@@ -16,17 +16,22 @@
                 '4/3': '4 / 3',
                 '7/6': '7 / 6',
                 '5/9': '5 / 9',
+                '9/5': '9 / 5',
                 '7/12': '7 / 12',
                 '5/8': '5 / 8',
+                '7/2': '7 / 2',
+                '3/7': '3 / 7',
                 },
                 colors:{
                     text_grey: '#6C6C6C',
                     soft_grey: '#D9D9D9',
+                    dark_grey: '#3E3E3E',
                     light_grey: '#F5F5F5',
                     primary_red: '#E61F1F',
                     darker_red: '#BE1A1A',
                     dark_section_grey: '#2F2F2F',
                     blog_dark: '#292929',
+                    soft_red: '#FF6767',
                 }
             }
             }
@@ -35,29 +40,117 @@
     {% endblock others %}
 {% block content %}
 {% include 'partials/navbar.html' %}
-<div class="w-screen h-auto bg-slate-300">
-    <div class="flex bg-green-400">
-        <div class="w-[70%] h-auto p-[50px] bg-red-500">
-            <div class="mb-[30px] h-auto w-full bg-blue-600">
-                <h1 class="font-inter font-bold text-[50px] text-blog_dark mb-[25px]">
-                    Create a Blog using Django
-                </h1>
-                <div class="flex items-center gap-[20px] w-full bg-yellow-300 h-auto">
-                    <div class="aspect-square w-[10%] rounded-full bg-soft_grey"></div>
-                    <div class="">
-                        <h1 class="font-inter font-medium text-[22px] text-blog_dark mb-[5px]">
-                            Daffa Bilnadzary
+<div class="flex">
+    <div class="flex w-full">
+        <div class="flex flex-1">
+            <div class=" paragraph">
+                <div class="h-auto p-[50px]">
+                    <div class="mb-[30px] h-auto w-full">
+                        <h1 class="font-inter font-bold text-[50px] text-blog_dark mb-[25px]">
+                            Create a Blog using Django
                         </h1>
-                        <h1 class="font-inter font-base text-[18px] text-[#5B5B5B]">
+                        <div class="flex items-center gap-[20px] w-full h-auto">
+                            <div class="aspect-square w-[10%] rounded-full bg-soft_grey"></div>
+                            <div class="">
+                                <h1 class="font-inter font-medium text-[22px] text-blog_dark mb-[5px]">
+                                    Daffa Bilnadzary
+                                </h1>
+                                <h1 class="font-inter font-base text-[18px] text-[#5B5B5B]">
+                                    17 Juni 2022
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full rounded-[10px] aspect-9/5 bg-purple-500 mb-[25px]"></div>
+                    <div class="font-inter font-base text-[20px] text-blog_dark w-full h-auto mb-[100px]">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit leo eu faucibus rhoncus. Curabitur consectetur auctor nisi ac pretium. Fusce vel semper mauris. Nullam in venenatis purus, at sollicitudin dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris est justo, vulputate nec metus et, molestie mattis diam. Nam et est vitae mauris tristique pulvinar. Donec gravida lectus nisi, a pellentesque magna vulputate non. Donec et risus fermentum, viverra dolor quis, varius eros. Sed eget elementum nunc. Praesent eget dolor elit. Vivamus tincidunt vehicula tincidunt. Nullam enim quam, imperdiet in scelerisque eget, convallis ultricies ligula. Integer non nulla mauris. Suspendisse vestibulum odio id ex suscipit, eu eleifend leo finibus. Phasellus at metus odio.
+                        <br> <br> Aenean tristique tristique augue, eget ullamcorper orci imperdiet at. Fusce in nunc sed dui ultrices laoreet eu et est. Nullam efficitur leo non augue volutpat congue. Aliquam non ornare purus. Maecenas vitae ornare leo. Etiam a orci ultricies mauris imperdiet efficitur id molestie nisl. Pellentesque pulvinar, purus vel efficitur porttitor, purus lectus ultrices leo, vitae mollis lectus augue a elit. Donec efficitur leo rutrum, pharetra purus eu, auctor lorem. Sed ac tempor orci. Integer sagittis sagittis dui. Pellentesque fringilla quam vel dui efficitur pretium. Proin sit amet purus porttitor arcu varius porta.
+                        <br> <br> Aenean congue turpis magna, quis ultricies ex facilisis id. Maecenas et lectus pretium, gravida sem in, viverra lacus. Mauris blandit iaculis lobortis. Etiam eget elementum neque, ac accumsan leo. Ut viverra vulputate ex, sed ultrices nisi varius ut. Aenean placerat porta libero vel dapibus. Donec euismod vitae lacus sed hendrerit. Morbi dapibus, eros sed maximus malesuada, lacus neque auctor odio, sit amet convallis velit justo sit amet lorem. Nam varius vel velit nec aliquet. Cras feugiat sollicitudin risus eget mattis. In hac habitasse platea dictumst.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col h-auto p-[30px] w-[30%] bg-light_grey">
+            <h1 class="font-inter font-bold text-[25px] mb-[30px]">
+                Artikel lain
+            </h1>
+            <div class="flex flex-col space-y-[10px] w-full h-auto mb-[50px]">
+                <div class="flex w-full aspect-7/2 bg-white rounded-[10px]">
+                    <div class="flex-none rounded-[10px] h-full w-[45%] bg-slate-500"></div>
+                    <div class="my-[10px] mx-[10px]">
+                        <h1 class="font-inter font-base text-[10px] text-[#5B5B5B]">
                             17 Juni 2022
+                        </h1>
+                        <h1 class="font-inter font-semibold text-[13px]">
+                            Lorem ipsum dolor sit amet bla lorem ipsum bla ipsum dolor sit amet bla lorem ipsum bla
                         </h1>
                     </div>
                 </div>
-
+                <div class="flex w-full aspect-7/2 bg-white rounded-[10px]">
+                    <div class="flex-none rounded-[10px] h-full w-[45%] bg-slate-500"></div>
+                    <div class="my-[10px] mx-[10px]">
+                        <h1 class="font-inter font-base text-[10px] text-[#5B5B5B]">
+                            17 Juni 2022
+                        </h1>
+                        <h1 class="font-inter font-semibold text-[13px]">
+                            Lorem ipsum dolor sit amet bla lorem ipsum bla ipsum dolor sit amet bla lorem ipsum bla
+                        </h1>
+                    </div>
+                </div>
+                <div class="flex w-full aspect-7/2 bg-white rounded-[10px]">
+                    <div class="flex-none rounded-[10px] h-full w-[45%] bg-slate-500"></div>
+                    <div class="my-[10px] mx-[10px]">
+                        <h1 class="font-inter font-base text-[10px] text-[#5B5B5B]">
+                            17 Juni 2022
+                        </h1>
+                        <h1 class="font-inter font-semibold text-[13px]">
+                            Lorem ipsum dolor sit amet bla lorem ipsum bla ipsum dolor sit amet bla lorem ipsum bla
+                        </h1>
+                    </div>
+                </div>
+                <div class="flex w-full aspect-7/2 bg-white rounded-[10px]">
+                    <div class="flex-none rounded-[10px] h-full w-[45%] bg-slate-500"></div>
+                    <div class="my-[10px] mx-[10px]">
+                        <h1 class="font-inter font-base text-[10px] text-[#5B5B5B]">
+                            17 Juni 2022
+                        </h1>
+                        <h1 class="font-inter font-semibold text-[13px]">
+                            Lorem ipsum dolor sit amet bla lorem ipsum bla ipsum dolor sit amet bla lorem ipsum bla
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <h1 class="font-inter font-bold text-[25px] mb-[20px]">
+                Kontak
+            </h1>
+            <div class="flex flex-col bg-white p-[15px] h-auto w-full space-y-[10px] rounded-[10px]">
+                <div class="flex items-center space-x-[10px]">
+                    <div class="flex w-[10%] aspect-square rounded-[10px] bg-soft_red"></div>
+                    <h1 class="flex flex-1 font-inter font-medium text-[13px] text-dark_grey">
+                        kkn.sinergibaki
+                    </h1>
+                </div>
+                <div class="flex items-center space-x-[10px]">
+                    <div class="flex w-[10%] aspect-square rounded-[10px] bg-soft_red"></div>
+                    <h1 class="flex flex-1 font-inter font-medium text-[13px] text-dark_grey">
+                        kkn.sinergibaki
+                    </h1>
+                </div>
+                <div class="flex items-center space-x-[10px]">
+                    <div class="flex w-[10%] aspect-square rounded-[10px] bg-soft_red"></div>
+                    <h1 class="flex flex-1 font-inter font-medium text-[13px] text-dark_grey">
+                        kkn.sinergibaki
+                    </h1>
+                </div>
+                <div class="flex items-center space-x-[10px]">
+                    <div class="flex w-[10%] aspect-square rounded-[10px] bg-soft_red"></div>
+                    <h1 class="flex flex-1 font-inter font-medium text-[13px] text-dark_grey">
+                        kkn.sinergibaki
+                    </h1>
+                </div>
             </div>
         </div>
     </div>
-
 </div>
 
 
