@@ -9,3 +9,7 @@ class Home(View):
 class Activity(View):
     def get(self, request,*args, **kwargs):
         return render(request, 'activities.html')
+
+class ActivityDetail(View):
+    def get(self, request,*args, **kwargs):
+        return render(request, 'activityDetail.html')

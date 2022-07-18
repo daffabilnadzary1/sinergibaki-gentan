@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Activity Detail
+{% endblock title %}
+    {% block others %}
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+            extend: {
+                fontFamily: {
+                inter: ['Inter']
+                },
+                aspectRatio: {
+                '4/3': '4 / 3',
+                '7/6': '7 / 6',
+                '5/9': '5 / 9',
+                '7/12': '7 / 12',
+                '5/8': '5 / 8',
+                },
+                colors:{
+                    text_grey: '#6C6C6C',
+                    soft_grey: '#D9D9D9',
+                    light_grey: '#F5F5F5',
+                    primary_red: '#E61F1F',
+                    darker_red: '#BE1A1A',
+                    dark_section_grey: '#2F2F2F',
+                    blog_dark: '#292929',
+                }
+            }
+            }
+        }
+    </script>
+    {% endblock others %}
+{% block content %}
+{% include 'partials/navbar.html' %}
+<div class="w-screen h-auto bg-slate-300">
+    <div class="flex bg-green-400">
+        <div class="w-[70%] h-auto p-[50px] bg-red-500">
+            <div class="mb-[30px] h-auto w-full bg-blue-600">
+                <h1 class="font-inter font-bold text-[50px] text-blog_dark mb-[25px]">
+                    Create a Blog using Django
+                </h1>
+                <div class="flex items-center gap-[20px] w-full bg-yellow-300 h-auto">
+                    <div class="aspect-square w-[10%] rounded-full bg-soft_grey"></div>
+                    <div class="">
+                        <h1 class="font-inter font-medium text-[22px] text-blog_dark mb-[5px]">
+                            Daffa Bilnadzary
+                        </h1>
+                        <h1 class="font-inter font-base text-[18px] text-[#5B5B5B]">
+                            17 Juni 2022
+                        </h1>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock content %}
