@@ -33,24 +33,23 @@
 
 {% block content %}
 {% include 'partials/navbar.html' %}
-<div class="h-auto py-[60px] px-[80px] w-screen bg-light_grey">
+<div class="h-auto py-[60px] px-[80px]" style="background-image: url('{% static 'image/pic_LandingBg.png' %}');">
     <div class="flex w-full h-full items-center">
         <div class="h-auto w-3/5 mr-[50px]">
-            <h1 class="font-inter font-bold text-primary_red text-[50px] w-1/2 leading-[50px]">
+            <h1 class="font-inter font-semibold text-white text-[50px] w-1/2 leading-[50px]">
                 Pemerintahan Desa Gentan
             </h1>
-            <p class="font-inter font-medium text-text_grey text-[20px] mt-[15px]">
+            <p class="font-inter font-base text-white text-[20px] mt-[15px]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus dictum urna quis pretium. Sed iaculis at ligula nec vehicula. Nunc odio lectus, tempor quis justo pharetra, vestibulum consequat augue. Ut a sapien ut enim commodo imperdiet et vel mi. Aenean dapibus urna non nibh bibendum, vitae semper nunc pharetra. Fusce ac purus pellentesque, sagittis nisi vitae, volutpat sapien. Curabitur a ipsum diam. Fusce quis libero elementum, molestie neque at, porta erat.
             </p>
         </div>
         <div class="h-full w-2/5">
-            <div class="rounded-tl-[200px] rounded-br-[200px] bg-slate-600 w-full aspect-square">
-            </div>
+            <img src="{% static 'image/pic_LandingGentan.png' %}" alt="" class="w-full aspect-square">
         </div>
     </div>
 </div>
 
-<div class="mt-[30px] w-screen h-auto py-[40px] px-[90px] bg-light_grey">
+<div class="mt-[30px] h-auto py-[40px] px-[90px] bg-light_grey">
     <h1 class="flex justify-center font-bold font-inter text-[40px] text-darker_red">
         Program Kami
     </h1>
@@ -103,7 +102,7 @@
     </div>
 </div>
 
-<div class="mt-[30px] w-screen h-auto py-[60px] px-[100px] bg-light_grey">
+<div class="mt-[30px] h-auto py-[60px] px-[100px] bg-light_grey">
     <div class="flex w-full h-full justify-center">
         <div class="h-full w-5/12 aspect-4/3 bg-slate-400 rounded-[30px]"></div>
         <div class="ml-[50px] h-full w-7/12">
@@ -117,7 +116,7 @@
     </div>
 </div>
 
-<div class="mt-[30px] w-screen h-auto py-[60px] px-[100px] bg-light_grey">
+<div class="mt-[30px] h-auto py-[60px] px-[100px] bg-light_grey">
     <div class="flex w-full h-full justify-center">
         <div class="h-full w-5/12 aspect-4/3 bg-slate-400 rounded-[30px]"></div>
         <div class="ml-[50px] h-full w-7/12">
