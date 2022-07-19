@@ -6,18 +6,22 @@
             <a href="#" class = "h-full">
                 <img src="{% static 'logo/logo_desagentan.png' %}" alt="">
             </a>
-            <h1 class="ml-[40px] font-inter font-bold text-[20px] text-[#F33737]">
+            <a href = "{% url 'website:home' %}" 
+            class="ml-[20px] font-inter font-medium text-[20px] text-[#6C6C6C]
+            {% if navbar == 'home' %} font-bold text-[#F33737] {% endif %}">
                 Home
-            </h1>
-            <h1 class="ml-[20px] font-inter font-medium text-[20px] text-[#6C6C6C]">
+            </a>
+            <a href = "{% url 'website:activity' %}" 
+            class="ml-[20px] font-inter font-medium text-[20px] text-[#6C6C6C]
+            {% if navbar == 'activity' %} font-bold text-[#F33737] {% endif %}">
                 Kegiatan
-            </h1>
-            <h1 class="ml-[20px] font-inter font-medium text-[20px] text-[#6C6C6C]">
+            </a>
+            <a href = "#" class="ml-[20px] font-inter font-medium text-[20px] text-[#6C6C6C]">
                 Layanan
-            </h1>
-            <h1 class="ml-[20px] font-inter font-medium text-[20px] text-[#6C6C6C]">
+            </a>
+            <a href = "#" class="ml-[20px] font-inter font-medium text-[20px] text-[#6C6C6C]">
                 Desa
-            </h1>
+            </a>
         </div>
         <input
             type="search"
