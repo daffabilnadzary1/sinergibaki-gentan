@@ -32,87 +32,34 @@
     {% endblock others %}
 
 {% block content %}
-<div class="h-[80px] px-[30px] py-[10px]">
-    <div class="justify-between flex w-auto h-full items-center">
-        <div class="w-auto h-full flex items-center">
-            <a href="#" class = "h-full">
-                <img src="{% static 'logo/logo_desagentan.png' %}" alt="">
-            </a>
-            <div class="hidden md:flex ml-[20px] space-x-[20px]">
-                <a href = "{% url 'website:home' %}" 
-                class="font-inter font-medium text-[18px] text-[#6C6C6C]
-                {% if navbar == 'home' %} font-bold text-[#F33737] {% endif %}">
-                    Home
-                </a>
-                <a href = "{% url 'website:activity' %}" 
-                class="font-inter font-medium text-[18px] text-[#6C6C6C]
-                {% if navbar == 'activity' %} font-bold text-[#F33737] {% endif %}">
-                    Kegiatan
-                </a>
-                <a href = "#" class="font-inter font-medium text-[18px] text-[#6C6C6C]">
-                    Layanan
-                </a>
-                <a href = "#" class="font-inter font-medium text-[18px] text-[#6C6C6C]">
-                    Desa
-                </a>
-            </div>
+<div class="h-auto py-[60px] px-[80px]" style="background-image: url('{% static 'image/pic_LandingBg.png' %}');">
+    <div class="flex w-full h-full items-center">
+        <div class="h-auto w-3/5 mr-[50px]">
+            <h1 class="font-inter font-semibold text-white text-[50px] w-1/2 leading-[50px]">
+                Pemerintahan Desa Gentan
+            </h1>
+            <p class="font-inter font-base text-white text-[20px] mt-[15px]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus dictum urna quis pretium. Sed iaculis at ligula nec vehicula. Nunc odio lectus, tempor quis justo pharetra, vestibulum consequat augue. Ut a sapien ut enim commodo imperdiet et vel mi. Aenean dapibus urna non nibh bibendum, vitae semper nunc pharetra. Fusce ac purus pellentesque, sagittis nisi vitae, volutpat sapien. Curabitur a ipsum diam. Fusce quis libero elementum, molestie neque at, porta erat.
+            </p>
         </div>
-        <div class="hidden lg:flex items-center h-full w-[320px]">
-            <input
-                type="search"
-    
-                class="w-full py-[10px] pl-[20px] border-soft_grey border-[2px] rounded-[15px]
-                placeholder:text-[18px] placeholder:font-inter transition ease-in-out m-0 placeholder:font-medium
-                placeholder:text-[#BFBFBF] focus:text-gray-700 focus:bg-white focus:border-[#F33737]
-                focus: font-inter focus:outline-none focus:text-[16px] "
-    
-                id="exampleSearch"
-                placeholder="Cari..."
-            />
-        </div>
-        <!-- Mobile menu button -->
-        <div class="md:hidden flex items-center">
-            <button class="outline-none mobile-menu-button">
-                <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 "
-                    x-show="!showMenu"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-        </div>  
-    </div>
-    <div class="hidden mobile-menu">
-        <div class="flex float-right mt-[10px]">
-            <div class="h-auto w-auto rounded-[4px] pl-[15px] pr-[60px] py-[15px] bg-white">
-                <div class="flex flex-col space-y-[8px]">
-                    <a href="#" class="font-inter font-medium text-[15px] text-text_grey hover:bg-text_grey hover:text-white transition duration-500">
-                        Home
-                    </a>
-                    <a href="#" class="font-inter font-medium text-[15px] text-text_grey hover:bg-text_grey hover:text-white transition duration-500">
-                        Kegiatan
-                    </a>
-                    <a href="#" class="font-inter font-medium text-[15px] text-text_grey hover:bg-text_grey hover:text-white transition duration-500">
-                        Layanan
-                    </a>
-                    <a href="#" class="font-inter font-medium text-[15px] text-text_grey hover:bg-text_grey hover:text-white transition duration-500">
-                        Data
-                    </a>
-                </div>
-            </div>
+        <div class="h-full w-2/5">
+            <img src="{% static 'image/pic_LandingGentan.png' %}" alt="" class="w-full aspect-square">
         </div>
     </div>
-    <script>
-        const btn = document.querySelector("button.mobile-menu-button");
-        const menu = document.querySelector(".mobile-menu");
-        
-        btn.addEventListener("click", () => {
-            menu.classList.toggle("hidden");
-        });
-    </script>
+</div>
+<div class="h-auto px-[40px] py-[20px] lg:py-[60px] lg:px-[80px]" style="background-image: url('{% static 'image/pic_LandingBg.png' %}');">
+    <div class="flex flex-col-reverse lg:flex-row w-full h-full items-center">
+        <div class="h-auto w-full lg:w-[60%] lg:mr-[50x] bg-green-500">
+            <h1 class="font-inter font-semibold text-white text-[40px] lg:text-[50px] lg:w-1/2 leading-[50px] text-center lg:text-left">
+                Pemerintahan Desa Gentan
+            </h1>
+            <p class="font-inter font-base text-white text-[15px] lg:text-[20px] mt-[15px] text-center lg:text-left">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus dictum urna quis pretium. Sed iaculis at ligula nec vehicula. Nunc odio lectus, tempor quis justo pharetra, vestibulum consequat augue. Ut a sapien ut enim commodo imperdiet et vel mi. Aenean dapibus urna non nibh bibendum, vitae semper nunc pharetra. Fusce ac purus pellentesque, sagittis nisi vitae, volutpat sapien. Curabitur a ipsum diam. Fusce quis libero elementum, molestie neque at, porta erat.
+            </p>
+        </div>
+        <div class="h-full w-full md:w-[60%] lg:w-[40%]">
+            <img src="{% static 'image/pic_LandingGentan.png' %}" alt="" class="w-full aspect-square">
+        </div>
+    </div>
 </div>
 {% endblock content%}
