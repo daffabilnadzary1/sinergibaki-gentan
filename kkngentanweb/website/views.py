@@ -17,3 +17,7 @@ class Activity(View):
 class ActivityDetail(View):
     def get(self, request,*args, **kwargs):
         return render(request, 'activityDetail.html')
+
+class Testing(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'testing.html')

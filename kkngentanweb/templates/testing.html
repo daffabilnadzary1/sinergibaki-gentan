@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Home Page
+{% endblock title %}
+    {% block others %}
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+            extend: {
+                fontFamily: {
+                inter: ['Inter']
+                },
+                aspectRatio: {
+                '4/3': '4 / 3',
+                '7/6': '7 / 6',
+                '5/9': '5 / 9',
+                '7/12': '7 / 12',
+                },
+                colors:{
+                    text_grey: '#6C6C6C',
+                    soft_grey: '#D9D9D9',
+                    light_grey: '#F5F5F5',
+                    primary_red: '#E61F1F',
+                    darker_red: '#BE1A1A',
+                }
+            }
+            }
+        }
+    </script>
+    {% endblock others %}
+
+{% block content %}
+<div class="h-[80px] px-[30px] py-[10px]">
+    <div class="justify-between flex w-auto h-full items-center">
+        <div class="w-auto h-full flex items-center">
+            <a href="#" class = "h-full">
+                <img src="{% static 'logo/logo_desagentan.png' %}" alt="">
+            </a>
+            <div class="hidden md:flex ml-[20px] space-x-[20px]">
+                <a href = "{% url 'website:home' %}" 
+                class="font-inter font-medium text-[18px] text-[#6C6C6C]
+                {% if navbar == 'home' %} font-bold text-[#F33737] {% endif %}">
+                    Home
+                </a>
+                <a href = "{% url 'website:activity' %}" 
+                class="font-inter font-medium text-[18px] text-[#6C6C6C]
+                {% if navbar == 'activity' %} font-bold text-[#F33737] {% endif %}">
+                    Kegiatan
+                </a>
+                <a href = "#" class="font-inter font-medium text-[18px] text-[#6C6C6C]">
+                    Layanan
+                </a>
+                <a href = "#" class="font-inter font-medium text-[18px] text-[#6C6C6C]">
+                    Desa
+                </a>
+            </div>
+        </div>
+        <div class="hidden lg:flex items-center h-full w-[320px]">
+            <input
+                type="search"
+    
+                class="w-full py-[10px] pl-[20px] border-soft_grey border-[2px] rounded-[15px]
+                placeholder:text-[18px] placeholder:font-inter transition ease-in-out m-0 placeholder:font-medium
+                placeholder:text-[#BFBFBF] focus:text-gray-700 focus:bg-white focus:border-[#F33737]
+                focus: font-inter focus:outline-none focus:text-[16px] "
+    
+                id="exampleSearch"
+                placeholder="Cari..."
+            />
+        </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+            <button class="outline-none mobile-menu-button">
+                <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 "
+                    x-show="!showMenu"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>  
+    </div>
+    <div class="hidden mobile-menu">
+        <div class="flex float-right mt-[10px]">
+            <div class="h-auto w-auto rounded-[4px] pl-[15px] pr-[60px] py-[15px] bg-white">
+                <div class="flex flex-col space-y-[8px]">
+                    <a href="#" class="font-inter font-medium text-[15px] text-text_grey hover:bg-text_grey hover:text-white transition duration-500">
+                        Home
+                    </a>
+                    <a href="#" class="font-inter font-medium text-[15px] text-text_grey hover:bg-text_grey hover:text-white transition duration-500">
+                        Kegiatan
+                    </a>
+                    <a href="#" class="font-inter font-medium text-[15px] text-text_grey hover:bg-text_grey hover:text-white transition duration-500">
+                        Layanan
+                    </a>
+                    <a href="#" class="font-inter font-medium text-[15px] text-text_grey hover:bg-text_grey hover:text-white transition duration-500">
+                        Data
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const btn = document.querySelector("button.mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
+        
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+</div>
+{% endblock content%}
