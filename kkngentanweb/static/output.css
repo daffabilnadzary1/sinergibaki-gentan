@@ -581,3 +581,9 @@ video {
   --tw-text-opacity: 1;
   color: rgb(243 244 246 / var(--tw-text-opacity));
 }
+
+article img{
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: .25rem!important;
+}
