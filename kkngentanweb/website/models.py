@@ -4,7 +4,7 @@ import uuid
 from django.utils import timezone
 
 # Create your models here.
-class Activity():
+class Activity(models.Model):
     STATUS_CHOICES = (
         ('draft', 'Draft'),
         ('published', 'Published'),
