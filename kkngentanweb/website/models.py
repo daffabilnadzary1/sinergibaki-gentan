@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser, User
 import uuid
 from django.utils import timezone
+from django.urls import reverse
 
 # Create your models here.
 class PublishedManager(models.Manager):
@@ -33,3 +34,7 @@ class Activity(models.Model):
     
     objects = models.Manager()
     published = PublishedManager()
+
+    def get_absolute_url(self):
+        return reverse("website:activityDetail", args=[self.slug])
+    

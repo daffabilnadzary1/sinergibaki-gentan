@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}
-    Activity Detail
+    {{ activity.title }}
 {% endblock title %}
     {% block others %}
     <script src="https://cdn.tailwindcss.com"></script>
@@ -42,30 +42,33 @@
 {% include 'partials/navbar.html' %}
 <div class="flex">
     <div class="flex w-full">
-        <div class="flex flex-1">
-            <div class=" paragraph">
-                <div class="h-auto p-[40px] lg:p-[50px]">
+        <div class="flex flex-1 w-[70%]">
+            <div class="paragraph w-full">
+                <div class="h-auto p-[40px] lg:p-[50px] w-full">
                     <div class="mb-[30px] h-auto w-full">
                         <h1 class="font-inter font-bold text-[50px] text-blog_dark mb-[25px]">
-                            Create a Blog using Django
+                            {{ activity.title }}
                         </h1>
                         <div class="flex items-center gap-[20px] w-full h-auto">
                             <div class="aspect-square w-[15%] lg:w-[10%] rounded-full bg-soft_grey"></div>
                             <div class="">
                                 <h1 class="font-inter font-medium text-[22px] text-blog_dark mb-[5px]">
-                                    Daffa Bilnadzary
+                                    {{ activity.author }}
                                 </h1>
                                 <h1 class="font-inter font-base text-[18px] text-[#5B5B5B]">
-                                    17 Juni 2022
+                                    {{ activity.publish.date }}
                                 </h1>
                             </div>
                         </div>
                     </div>
                     <div class="w-full rounded-[10px] aspect-9/5 bg-purple-500 mb-[25px]"></div>
-                    <div class="font-inter font-base text-[16px] lg:text-[20px] text-blog_dark w-full h-auto mb-[100px]">
+                    {% comment %} <div class="font-inter font-base text-[16px] lg:text-[20px] text-blog_dark w-full h-auto mb-[100px]">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit leo eu faucibus rhoncus. Curabitur consectetur auctor nisi ac pretium. Fusce vel semper mauris. Nullam in venenatis purus, at sollicitudin dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris est justo, vulputate nec metus et, molestie mattis diam. Nam et est vitae mauris tristique pulvinar. Donec gravida lectus nisi, a pellentesque magna vulputate non. Donec et risus fermentum, viverra dolor quis, varius eros. Sed eget elementum nunc. Praesent eget dolor elit. Vivamus tincidunt vehicula tincidunt. Nullam enim quam, imperdiet in scelerisque eget, convallis ultricies ligula. Integer non nulla mauris. Suspendisse vestibulum odio id ex suscipit, eu eleifend leo finibus. Phasellus at metus odio.
                         <br> <br> Aenean tristique tristique augue, eget ullamcorper orci imperdiet at. Fusce in nunc sed dui ultrices laoreet eu et est. Nullam efficitur leo non augue volutpat congue. Aliquam non ornare purus. Maecenas vitae ornare leo. Etiam a orci ultricies mauris imperdiet efficitur id molestie nisl. Pellentesque pulvinar, purus vel efficitur porttitor, purus lectus ultrices leo, vitae mollis lectus augue a elit. Donec efficitur leo rutrum, pharetra purus eu, auctor lorem. Sed ac tempor orci. Integer sagittis sagittis dui. Pellentesque fringilla quam vel dui efficitur pretium. Proin sit amet purus porttitor arcu varius porta.
                         <br> <br> Aenean congue turpis magna, quis ultricies ex facilisis id. Maecenas et lectus pretium, gravida sem in, viverra lacus. Mauris blandit iaculis lobortis. Etiam eget elementum neque, ac accumsan leo. Ut viverra vulputate ex, sed ultrices nisi varius ut. Aenean placerat porta libero vel dapibus. Donec euismod vitae lacus sed hendrerit. Morbi dapibus, eros sed maximus malesuada, lacus neque auctor odio, sit amet convallis velit justo sit amet lorem. Nam varius vel velit nec aliquet. Cras feugiat sollicitudin risus eget mattis. In hac habitasse platea dictumst.
+                    </div> {% endcomment %}
+                    <div class="font-inter font-base text-[16px] lg:text-[20px] text-blog_dark h-auto mb-[100px]">
+                        {{ activity.body|linebreaks }}
                     </div>
                 </div>
             </div>

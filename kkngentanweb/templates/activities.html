@@ -55,30 +55,34 @@
     Kegiatan
 </h1>
 <div class="rounded-[20px] bg-light_grey mt-[20px] mx-[30px] pt-[20px] px-[20px] pb-[50px]">
+    {% for activity in activities %}
     <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-[30px]">
-        <div class="rounded-[15px] overflow-hidden shadow-lg">
-          <img class="w-full aspect-video" src={% static 'image/eventPic_Rossa.png' %} alt="Mountain">
-          <div class="px-[20px] py-[15px] bg-white">
-            <div class="font-inter font-bold text-xl mb-[10px]">Mountain</div>
-            <p class="mt-[40px] font-inter text-gray-700 text-base">
-                16 Juli 2022
-            </p>
-          </div>
-        </div>
+        <a href="{{ activity.get_absolute_url }}" class="">
+            <div class="rounded-[15px] overflow-hidden shadow-lg">
+              <img class="w-full aspect-video" src={% static 'image/eventPic_Rossa.png' %} alt="Activity">
+              <div class="px-[20px] py-[15px] bg-white">
+                <div class="font-inter font-bold text-xl mb-[10px]">{{ activity.title }}</div>
+                <p class="mt-[40px] font-inter text-gray-700 text-base">
+                    16 Juli 2022
+                </p>
+              </div>
+            </div>
+        </a>
     </div>
+    {% endfor %}
     <div class="mt-[40px] flex justify-center items-center h-auto">
         <div class="aspect-square w-[70px] rounded-[15px] bg-[#D9D9D9]"></div>
-        <div class=" mx-[60px] gap-[20px] flex">
-            <div class="bg-slate-600 rounded-[10px] px-[18px] aspect-square flex items-center">
-                <h1 class="font-bold font-inter text-[25px]">1</h1>
+            <div class=" mx-[60px] gap-[20px] flex">
+                <div class="bg-slate-600 rounded-[10px] px-[18px] aspect-square flex items-center">
+                    <h1 class="font-bold font-inter text-[25px]">1</h1>
+                </div>
+                <div class="bg-slate-600 rounded-[10px] px-[18px] aspect-square flex items-center">
+                    <h1 class="font-bold font-inter text-[25px]">2</h1>
+                </div>
+                <div class="bg-slate-600 rounded-[10px] px-[18px] aspect-square flex items-center">
+                    <h1 class="font-bold font-inter text-[25px]">3</h1>
+                </div>
             </div>
-            <div class="bg-slate-600 rounded-[10px] px-[18px] aspect-square flex items-center">
-                <h1 class="font-bold font-inter text-[25px]">2</h1>
-            </div>
-            <div class="bg-slate-600 rounded-[10px] px-[18px] aspect-square flex items-center">
-                <h1 class="font-bold font-inter text-[25px]">3</h1>
-            </div>
-        </div>
         <div class="aspect-square w-[70px] rounded-[15px] bg-[#D9D9D9]">
         </div>
     </div>
