@@ -1,47 +1,94 @@
 {% load static %}
 
 {% if page.has_other_pages %}
-  <ul class="pagination mt-3 mb-0"> 
+<div class="mt-[40px] flex justify-center items-center h-auto">
     {% if page.has_previous %}
-      <li class="page-item">
-        <a class="page-link" href="?page={{ page.previous_page_number }}">
-            bb
+        <a class="h-auto flex flex-row items-center space-x-0" href = "?page={{ page.previous_page_number }}">
+            <div class="aspect-square h-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 26 26">
+                    <g clip-path="url(#a)">
+                    <path fill="#BE1A1A" fill-rule="evenodd" d="M2.563 10.938 11.5 2l2.063 2.063L4.624 13l8.938 8.938L11.5 24l-8.938-8.938L.5 13l2.063-2.063Z" clip-rule="evenodd"/>
+                    </g>
+                    <defs>
+                    <clipPath id="a">
+                        <path fill="#fff" d="M0 0h25v25H0z" transform="translate(.5 .5)"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </div>
+            <h1 class="font-inter font-semibold text-[20px] text-darker_red">
+                Prev
+            </h1>
         </a>
-    </li>
     {% else %}
-      <li class="disabled page-item">
-        <span class="page-link">
-            bb
-        </span>
-    </li>
+        <div class="h-auto flex flex-row items-center space-x-0">
+            <div class="aspect-square h-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 26 26">
+                    <g clip-path="url(#a)">
+                    <path fill="#BE1A1A" fill-rule="evenodd" d="M2.563 10.938 11.5 2l2.063 2.063L4.624 13l8.938 8.938L11.5 24l-8.938-8.938L.5 13l2.063-2.063Z" clip-rule="evenodd"/>
+                    </g>
+                    <defs>
+                    <clipPath id="a">
+                        <path fill="#fff" d="M0 0h25v25H0z" transform="translate(.5 .5)"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </div>
+            <h1 class="font-inter font-semibold text-[20px] text-darker_red">
+                Prev
+            </h1>
+        </div>
     {% endif %}
-    {% for i in page.paginator.page_range %}
-      {% if page.number == i %}
-        <li class="active page-item">
-            <span class="page-link">
-                {{ i }}
-            </span>
-        </li>
-      {% else %}
-        <li class="page-item">
-            <a class="page-link" href="?page={{ i }}">
-                {{ i }}
-            </a>
-        </li>
-      {% endif %}
-    {% endfor %}
+    <div class=" mx-[30px] gap-[10px] flex">
+        {% for i in page.paginator.page_range %}
+            {% if page.number == i %}
+                <div class="bg-darker_red rounded-[10px] px-[22px] aspect-square flex items-center">
+                    <h1 class="font-bold font-inter text-[25px] text-white">{{ i }}</h1>
+                </div>
+            {% else %}
+                <a class="bg-white rounded-[10px] border-[2px] border-darker_red px-[18px] aspect-square flex items-center"
+                href="?page={{ i }}">
+                    <h1 class="font-bold font-inter text-[25px]">{{ i }}</h1>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
     {% if page.has_next %}
-      <li class="page-item">
-        <a class="page-link" href="?page={{ page.next_page_number }}">
-            aa
+        <a class="h-auto flex flex-row items-center space-x-0" href = "?page={{ page.next_page_number }}">
+            <h1 class="font-inter font-semibold text-[20px] text-darker_red">
+                Next
+            </h1>
+            <div class="aspect-square h-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 26 26">
+                    <g clip-path="url(#a)">
+                    <path fill="#BE1A1A" fill-rule="evenodd" d="M23.541 10.938 14.604 2 12.54 4.063 21.48 13l-8.938 8.938L14.604 24l8.937-8.938L25.604 13l-2.063-2.063Z" clip-rule="evenodd"/>
+                    </g>
+                    <defs>
+                    <clipPath id="a">
+                        <path fill="#fff" d="M0 0h25v25H0z" transform="translate(.5 .5)"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </div>
         </a>
-    </li>
     {% else %}
-      <li class="disabled page-item">
-        <span class="page-link">
-            aa
-        </span>
-    </li>
+        <div class="h-auto flex flex-row items-center space-x-0">
+            <h1 class="font-inter font-semibold text-[20px] text-darker_red">
+                Next
+            </h1>
+            <div class="aspect-square h-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 26 26">
+                    <g clip-path="url(#a)">
+                    <path fill="#BE1A1A" fill-rule="evenodd" d="M23.541 10.938 14.604 2 12.54 4.063 21.48 13l-8.938 8.938L14.604 24l8.937-8.938L25.604 13l-2.063-2.063Z" clip-rule="evenodd"/>
+                    </g>
+                    <defs>
+                    <clipPath id="a">
+                        <path fill="#fff" d="M0 0h25v25H0z" transform="translate(.5 .5)"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </div>
+        </div>
     {% endif %}
-  </ul>
+</div>
 {% endif %}
