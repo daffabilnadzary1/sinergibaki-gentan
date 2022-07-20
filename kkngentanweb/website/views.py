@@ -12,8 +12,19 @@ class Home(View):
 class ActivityList(View):
     def get(self, request, *args, **kwargs):
         activities = Activity.published.all()
+
+        paginator = Paginator(activities, 6)
+        page = request.GET.get('page')
+        try:
+            activities = paginator.page(page)
+        except PageNotAnInteger:
+            activities = paginator.page(1)
+        except EmptyPage:
+            activities = paginator.page(paginator.num_pages)
+
         return render(request, 'activities.html', {
             'activities': activities,
+            page:'pages',
             'navbar':'activity',
         })
 
