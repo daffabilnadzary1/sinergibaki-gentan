@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views import View
+from .models import Activity
 
 # Create your views here.
 class Home(View):
@@ -10,7 +11,9 @@ class Home(View):
 
 class Activity(View):
     def get(self, request,*args, **kwargs):
+        activities = Activity.published.all()
         return render(request, 'activities.html', {
+            'activities': activities,
             'navbar':'activity'
         })
 

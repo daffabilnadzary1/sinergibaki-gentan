@@ -4,6 +4,11 @@ import uuid
 from django.utils import timezone
 
 # Create your models here.
+class PublishedManager(models.Manager):
+    def get_queryset(self):
+        return super(PublishedManager, self).get_queryset().filter(status = 'published')
+
+
 class Activity(models.Model):
     STATUS_CHOICES = (
         ('draft', 'Draft'),
@@ -23,7 +28,8 @@ class Activity(models.Model):
 
     class Meta:
         ordering = ('-publish',)
+        def __str__(self):
+            return self.title
     
-    def __str__(self):
-        return self.title
-    
+    objects = models.Manager()
+    published = PublishedManager()
