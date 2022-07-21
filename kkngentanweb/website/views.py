@@ -14,7 +14,10 @@ class Home(View):
 class ActivityList(View):
     def get(self, request, *args, **kwargs):
         activities = Activity.published.all()
-
+        #search functionality
+        query = request.GET.get('q')
+        if query:
+            activities = Activity.published.filter(Q(title__icontains=query)).distinct()
         paginator = Paginator(activities, 6)
         page = request.GET.get('page')
         try:
@@ -23,11 +26,6 @@ class ActivityList(View):
             activities = paginator.page(1)
         except EmptyPage:
             activities = paginator.page(paginator.num_pages)
-
-        #search functionality
-        query = request.GET.get('q')
-        if query:
-            activities = Activity.published.filter(Q(title__icontains=query)).distinct()
 
         return render(request, 'activities.html', {
             'activities': activities,
