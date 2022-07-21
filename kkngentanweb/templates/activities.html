@@ -34,26 +34,33 @@
     {% endblock others %}
 {% block content %}
 {% include 'partials/navbar.html' %}
-<div class="h-auto bg-light_grey py-[15px]">
-    <div class = "flex w-full justify-center h-[300px] overflow-clip overflow-x-scroll">
-        <a href="#" class = "h-full mr-[25px] bg-blue-700 aspect-video rounded-[20px]">
-            <img src="{% static 'image/20220713_082023.jpg' %}" alt="" class="article h-full object-cover rounded-[20px]">
-        </a>
-        <a href="#" class = "h-full mr-[25px] bg-blue-700 aspect-video rounded-[20px]">
-            <img src="{% static 'image/eventPic_Rossa.png' %}" alt="" class="article h-full object-cover rounded-[20px]">
-        </a>
-        <a href="#" class = "h-full mr-[25px] bg-blue-700 aspect-video rounded-[20px]">
-            <img src="{% static 'image/eventPic_Rossa.png' %}" alt="" class="article h-full object-cover rounded-[20px]">
-        </a>
-        <a href="#" class = "h-full mr-[25px] bg-blue-700 aspect-video rounded-[20px]">
-            <img src="{% static 'image/eventPic_Rossa.png' %}" alt="" class="article h-full object-cover rounded-[20px]">
-        </a>
-    </div>
-</div>
 
-<h1 class="mt-[30px] ml-[30px] font-inter font-bold text-dark_section_grey text-[30px]">
-    Kegiatan
-</h1>
+{% if request.GET.q is not null %}
+    <h1 class="text-[25px] mt-[30px] ml-[30px] font-inter font-bold text-dark_section_grey md:text-[30px]">
+        Hasil pencarian untuk "<span class = "text-primary_red">{{ request.GET.q }}</span>"
+    </h1>
+{% else %}
+    <div class="h-auto bg-light_grey py-[15px]">
+        <div class = "flex w-full justify-center h-[300px] overflow-clip overflow-x-scroll">
+            <a href="#" class = "h-full mr-[25px] bg-blue-700 aspect-video rounded-[20px]">
+                <img src="{% static 'image/20220713_082023.jpg' %}" alt="" class="article h-full object-cover rounded-[20px]">
+            </a>
+            <a href="#" class = "h-full mr-[25px] bg-blue-700 aspect-video rounded-[20px]">
+                <img src="{% static 'image/eventPic_Rossa.png' %}" alt="" class="article h-full object-cover rounded-[20px]">
+            </a>
+            <a href="#" class = "h-full mr-[25px] bg-blue-700 aspect-video rounded-[20px]">
+                <img src="{% static 'image/eventPic_Rossa.png' %}" alt="" class="article h-full object-cover rounded-[20px]">
+            </a>
+            <a href="#" class = "h-full mr-[25px] bg-blue-700 aspect-video rounded-[20px]">
+                <img src="{% static 'image/eventPic_Rossa.png' %}" alt="" class="article h-full object-cover rounded-[20px]">
+            </a>
+        </div>
+    </div>
+    <h1 class="mt-[30px] ml-[30px] font-inter font-bold text-dark_section_grey text-[30px]">
+        Kegiatan
+    </h1>
+{% endif %}
+
 <div class="rounded-[20px] bg-light_grey mt-[20px] mx-[30px] pt-[20px] px-[20px] pb-[50px]">
     <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-[30px]">
         {% for activity in activities %}
@@ -70,7 +77,7 @@
         </a>
         {% endfor %}
     </div>
-    {% include "pagination.html" with page=activities %}
+    {% include "partials/pagination.html" with page=activities %}
 </div>
 
 

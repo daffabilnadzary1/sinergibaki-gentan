@@ -39,19 +39,22 @@
                 </a>
             </div>
         </div>
-        <div class="hidden lg:flex items-center h-full w-[320px]">
+        <form class="hidden lg:flex items-center h-full w-[320px]" action = "/activity">
             <input
                 type="search"
     
                 class="w-full py-[10px] pl-[20px] border-soft_grey border-[2px] rounded-[15px]
                 placeholder:text-[18px] placeholder:font-inter transition ease-in-out m-0 placeholder:font-medium
                 placeholder:text-[#BFBFBF] focus:text-gray-700 focus:bg-white focus:border-[#F33737]
-                focus: font-inter focus:outline-none focus:text-[16px] "
+                focus: font-inter focus:outline-none focus:text-[16px]"
+
+                value="{{request.GET.q}}"
+                name="q"
     
                 id="exampleSearch"
                 placeholder="Cari..."
             />
-        </div>
+        </form>
         <!-- Mobile menu button -->
          
     </div>
