@@ -35,9 +35,11 @@ class ActivityList(View):
 
 class ActivityDetail(View):
     def get(self, request, activity, *args, **kwargs):
+        activities = Activity.published.all()[:4]
         activity = get_object_or_404(Activity, slug = activity, status = "published")
         return render(request, 'activityDetail.html', {
             'activity': activity,
+            'activities': activities,
         })
 
 class Testing(View):

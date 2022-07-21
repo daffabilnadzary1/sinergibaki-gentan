@@ -41,8 +41,8 @@
 {% block content %}
 {% include 'partials/navbar.html' %}
 <div class="flex">
-    <div class="flex w-full">
-        <div class="flex flex-1 w-[70%]">
+    <div class="flex flex-col lg:flex-row w-full">
+        <div class="flex flex-1 w-full lg:w-[70%]">
             <div class="paragraph w-full">
                 <div class="h-auto p-[40px] lg:p-[50px] w-full">
                     <div class="mb-[30px] h-auto w-full">
@@ -61,67 +61,31 @@
                             </div>
                         </div>
                     </div>
-                    <img src="{{ article.image.url }}" alt="" class="w-full rounded-[10px] aspect-9/5 bg-slate-800 mb-[25px] object-cover">
-                    {% comment %} <div class="font-inter font-base text-[16px] lg:text-[20px] text-blog_dark w-full h-auto mb-[100px]">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit leo eu faucibus rhoncus. Curabitur consectetur auctor nisi ac pretium. Fusce vel semper mauris. Nullam in venenatis purus, at sollicitudin dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris est justo, vulputate nec metus et, molestie mattis diam. Nam et est vitae mauris tristique pulvinar. Donec gravida lectus nisi, a pellentesque magna vulputate non. Donec et risus fermentum, viverra dolor quis, varius eros. Sed eget elementum nunc. Praesent eget dolor elit. Vivamus tincidunt vehicula tincidunt. Nullam enim quam, imperdiet in scelerisque eget, convallis ultricies ligula. Integer non nulla mauris. Suspendisse vestibulum odio id ex suscipit, eu eleifend leo finibus. Phasellus at metus odio.
-                        <br> <br> Aenean tristique tristique augue, eget ullamcorper orci imperdiet at. Fusce in nunc sed dui ultrices laoreet eu et est. Nullam efficitur leo non augue volutpat congue. Aliquam non ornare purus. Maecenas vitae ornare leo. Etiam a orci ultricies mauris imperdiet efficitur id molestie nisl. Pellentesque pulvinar, purus vel efficitur porttitor, purus lectus ultrices leo, vitae mollis lectus augue a elit. Donec efficitur leo rutrum, pharetra purus eu, auctor lorem. Sed ac tempor orci. Integer sagittis sagittis dui. Pellentesque fringilla quam vel dui efficitur pretium. Proin sit amet purus porttitor arcu varius porta.
-                        <br> <br> Aenean congue turpis magna, quis ultricies ex facilisis id. Maecenas et lectus pretium, gravida sem in, viverra lacus. Mauris blandit iaculis lobortis. Etiam eget elementum neque, ac accumsan leo. Ut viverra vulputate ex, sed ultrices nisi varius ut. Aenean placerat porta libero vel dapibus. Donec euismod vitae lacus sed hendrerit. Morbi dapibus, eros sed maximus malesuada, lacus neque auctor odio, sit amet convallis velit justo sit amet lorem. Nam varius vel velit nec aliquet. Cras feugiat sollicitudin risus eget mattis. In hac habitasse platea dictumst.
-                    </div> {% endcomment %}
+                    <img src="{{ activity.image.url }}" alt="" class="w-full rounded-[10px] aspect-9/5 bg-slate-800 mb-[25px] object-cover">
                     <div class="font-inter font-base text-[16px] lg:text-[20px] text-blog_dark h-auto mb-[100px]">
                         {{ activity.body|safe }}
                     </div>
                 </div>
             </div>
         </div>
-        <div class="hidden lg:flex flex-col h-auto p-[30px] w-[30%] bg-light_grey">
+        <div class="lg:flex flex-col h-auto p-[30px] w-full lg:w-[30%] bg-light_grey">
             <h1 class="font-inter font-bold text-[25px] mb-[30px]">
-                Artikel lain
+                Aktivitas terbaru
             </h1>
             <div class="flex flex-col space-y-[10px] w-full h-auto mb-[50px]">
-                <div class="flex w-full aspect-7/2 bg-white rounded-[10px]">
-                    <div class="flex-none rounded-[10px] h-full w-[45%] bg-slate-500"></div>
-                    <div class="my-[10px] mx-[10px]">
-                        <h1 class="font-inter font-base text-[10px] text-[#5B5B5B]">
-                            17 Juni 2022
-                        </h1>
-                        <h1 class="font-inter font-semibold text-[13px]">
-                            Lorem ipsum dolor sit amet bla lorem ipsum bla ipsum dolor sit amet bla lorem ipsum bla
-                        </h1>
+                {% for activity_latest in activities %}
+                    <div class="flex w-full aspect-7/2 bg-white rounded-[10px]">
+                        <div class="flex-none rounded-[10px] h-full w-[45%] bg-slate-500"></div>
+                        <div class="m-[10px] md:m-[20px] lg:m-[10px]">
+                            <h1 class="font-inter font-base text-[10px] md:text-[15px] lg:text-[10px] text-[#5B5B5B]">
+                                {{ activity_latest.publish.date }}
+                            </h1>
+                            <h1 class="font-inter font-semibold text-[13px] md:text-[18px] lg:text-[13px]">
+                                {{activity_latest.title|truncatechars:95}}
+                            </h1>
+                        </div>
                     </div>
-                </div>
-                <div class="flex w-full aspect-7/2 bg-white rounded-[10px]">
-                    <div class="flex-none rounded-[10px] h-full w-[45%] bg-slate-500"></div>
-                    <div class="my-[10px] mx-[10px]">
-                        <h1 class="font-inter font-base text-[10px] text-[#5B5B5B]">
-                            17 Juni 2022
-                        </h1>
-                        <h1 class="font-inter font-semibold text-[13px]">
-                            Lorem ipsum dolor sit amet bla lorem ipsum bla ipsum dolor sit amet bla lorem ipsum bla
-                        </h1>
-                    </div>
-                </div>
-                <div class="flex w-full aspect-7/2 bg-white rounded-[10px]">
-                    <div class="flex-none rounded-[10px] h-full w-[45%] bg-slate-500"></div>
-                    <div class="my-[10px] mx-[10px]">
-                        <h1 class="font-inter font-base text-[10px] text-[#5B5B5B]">
-                            17 Juni 2022
-                        </h1>
-                        <h1 class="font-inter font-semibold text-[13px]">
-                            Lorem ipsum dolor sit amet bla lorem ipsum bla ipsum dolor sit amet bla lorem ipsum bla
-                        </h1>
-                    </div>
-                </div>
-                <div class="flex w-full aspect-7/2 bg-white rounded-[10px]">
-                    <div class="flex-none rounded-[10px] h-full w-[45%] bg-slate-500"></div>
-                    <div class="my-[10px] mx-[10px]">
-                        <h1 class="font-inter font-base text-[10px] text-[#5B5B5B]">
-                            17 Juni 2022
-                        </h1>
-                        <h1 class="font-inter font-semibold text-[13px]">
-                            Lorem ipsum dolor sit amet bla lorem ipsum bla ipsum dolor sit amet bla lorem ipsum bla
-                        </h1>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
             <h1 class="font-inter font-bold text-[25px] mb-[20px]">
                 Kontak

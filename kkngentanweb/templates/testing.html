@@ -35,51 +35,19 @@
 {% block content %}
 {% include 'partials/navbar.html' %}
 
-<div class="mt-[40px] flex justify-center items-center h-auto">
-    <a class="h-auto flex flex-row items-center space-x-0" href = "#">
-        <div class="aspect-square h-auto">
-            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 26 26">
-                <g clip-path="url(#a)">
-                  <path fill="#BE1A1A" fill-rule="evenodd" d="M2.563 10.938 11.5 2l2.063 2.063L4.624 13l8.938 8.938L11.5 24l-8.938-8.938L.5 13l2.063-2.063Z" clip-rule="evenodd"/>
-                </g>
-                <defs>
-                  <clipPath id="a">
-                    <path fill="#fff" d="M0 0h25v25H0z" transform="translate(.5 .5)"/>
-                  </clipPath>
-                </defs>
-              </svg>
-        </div>
-        <h1 class="font-inter font-semibold text-[20px] text-darker_red">
-            Prev
-        </h1>
-    </a>
-    <div class=" mx-[30px] gap-[10px] flex">
-        <div class="bg-darker_red rounded-[10px] px-[22px] aspect-square flex items-center">
-            <h1 class="font-bold font-inter text-[25px] text-white">1</h1>
-        </div>
-        <div class="bg-white rounded-[10px] border-[2px] border-darker_red px-[18px] aspect-square flex items-center">
-            <h1 class="font-bold font-inter text-[25px]">2</h1>
-        </div>
-        <div class="bg-white rounded-[10px] border-[2px] border-darker_red px-[18px] aspect-square flex items-center">
-            <h1 class="font-bold font-inter text-[25px]">3</h1>
-        </div>
+<div class="rounded-[20px] bg-light_grey mt-[20px] mx-[30px] pt-[20px] px-[20px] pb-[50px]">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
+        <a href="#" class="">
+            <div class="rounded-[15px] flex flex-row md:flex-col overflow-hidden shadow-lg">
+              <img class="w-[50%] md:w-full aspect-video object-cover" src={% static 'image/eventPic_Rossa.png' %} alt="Activity">
+              <div class="flex flex-col space-y-[25px] lg:space-y-[40px] px-[20px] py-[15px] bg-white">
+                <div class="font-inter font-bold text-[15px] lg:text-[20px]">{{"aaaaaa lorem ipsum dolor sit amet nlba asdadad sada niba niba saaa dsdsds f"|truncatechars:60}}</div>
+                <p class=" font-inter text-gray-700 text-[12px] lg:text-[15px]">
+                    16 Juli 2022
+                </p>
+              </div>
+            </div>
+        </a>
     </div>
-    <a class="h-auto flex flex-row items-center space-x-0" href = "#">
-        <h1 class="font-inter font-semibold text-[20px] text-darker_red">
-            Next
-        </h1>
-        <div class="aspect-square h-auto">
-            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 26 26">
-                <g clip-path="url(#a)">
-                  <path fill="#BE1A1A" fill-rule="evenodd" d="M23.541 10.938 14.604 2 12.54 4.063 21.48 13l-8.938 8.938L14.604 24l8.937-8.938L25.604 13l-2.063-2.063Z" clip-rule="evenodd"/>
-                </g>
-                <defs>
-                  <clipPath id="a">
-                    <path fill="#fff" d="M0 0h25v25H0z" transform="translate(.5 .5)"/>
-                  </clipPath>
-                </defs>
-              </svg>
-        </div>
-    </a>
 </div>
 {% endblock content %}
