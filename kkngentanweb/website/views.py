@@ -3,6 +3,7 @@ from django.views import View
 from .models import Activity
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
+from django.http import JsonResponse
 
 # Create your views here.
 class Home(View):
@@ -45,3 +46,15 @@ class ActivityDetail(View):
 class Testing(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'testing.html')
+
+class Chart(View):
+    def get(self, request, *args, **kwargs):
+        data = {
+            "sales": 100,
+            "customers":10,
+        }
+        return JsonResponse(data) #http response
+
+class Dashboard(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'dashboard.html')

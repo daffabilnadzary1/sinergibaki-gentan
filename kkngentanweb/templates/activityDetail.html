@@ -75,7 +75,7 @@
             <div class="flex flex-col space-y-[10px] w-full h-auto mb-[50px]">
                 {% for activity_latest in activities %}
                     <div class="flex w-full aspect-7/2 bg-white rounded-[10px]">
-                        <div class="flex-none rounded-[10px] h-full w-[45%] bg-slate-500"></div>
+                        <img src="{{ activity_latest.image.url }}" class="flex-none rounded-[10px] h-full w-[45%] bg-slate-500 object-cover"></img>
                         <div class="m-[10px] md:m-[20px] lg:m-[10px]">
                             <h1 class="font-inter font-base text-[10px] md:text-[15px] lg:text-[10px] text-[#5B5B5B]">
                                 {{ activity_latest.publish.date }}

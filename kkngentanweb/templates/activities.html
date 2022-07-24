@@ -66,7 +66,7 @@
         {% for activity in activities %}
             <a href="{{ activity.get_absolute_url }}" class="">
                 <div class="rounded-[15px] flex flex-row md:flex-col overflow-hidden shadow-lg">
-                  <img class="w-[50%] md:w-full aspect-video object-cover" src="{% static 'image/eventPic_Rossa.png' %}" alt="Activity">
+                  <img class="w-[50%] md:w-full aspect-video object-cover" src="{{ activity.image.url }}" alt="Activity">
                   <div class="w-full flex flex-col space-y-[25px] lg:space-y-[40px] px-[20px] py-[15px] bg-white">
                     <div class="font-inter font-bold text-[15px] lg:text-[20px]">{{ activity.title|truncatechars:60}}</div>
                     <p class=" font-inter text-gray-700 text-[12px] lg:text-[15px]">
