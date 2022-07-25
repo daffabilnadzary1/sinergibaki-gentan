@@ -31,23 +31,48 @@
             }
         }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     {% endblock others %}
 {% block content %}
 {% include 'partials/navbar.html' %}
 
-<div class="rounded-[20px] bg-light_grey mt-[20px] mx-[30px] pt-[20px] px-[20px] pb-[50px]">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
-        <a href="#" class="">
-            <div class="rounded-[15px] flex flex-row md:flex-col overflow-hidden shadow-lg">
-              <img class="w-[50%] md:w-full aspect-video object-cover" src={% static 'image/eventPic_Rossa.png' %} alt="Activity">
-              <div class="flex flex-col space-y-[25px] lg:space-y-[40px] px-[20px] py-[15px] bg-white">
-                <div class="font-inter font-bold text-[15px] lg:text-[20px]">{{"aaaaaa lorem ipsum dolor sit amet nlba asdadad sada niba niba saaa dsdsds f"|truncatechars:60}}</div>
-                <p class=" font-inter text-gray-700 text-[12px] lg:text-[15px]">
-                    16 Juli 2022
-                </p>
-              </div>
-            </div>
-        </a>
-    </div>
+<div>
+    <canvas id="myChart"></canvas>
 </div>
+<script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const labels = {
+
+    }
+    const myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Organik', 'Kertas', 'Kayu', 'Kain', 'Karet/Kulit', 'Plastik', 'Logam', 'Gelas/Kaca', 'Lain-lain'],
+            datasets: [
+            {
+                label: 'P1',
+                data: [1, 0.25, 0.2, 0, 0, 0.6, 0.2, 0, 3.3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                ],
+                borderWidth: 1
+            },
+            ]
+        },
+        options: {
+            indexAxis: 'y',
+            elements: {
+                bar: {
+                  borderWidth: 2,
+                }
+            },
+        }
+    });
+</script>
+
+
+  
 {% endblock content %}
