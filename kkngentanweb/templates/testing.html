@@ -4,6 +4,12 @@
     Activity
 {% endblock title %}
     {% block others %}
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -36,43 +42,9 @@
 {% block content %}
 {% include 'partials/navbar.html' %}
 
-<div>
-    <canvas id="myChart"></canvas>
-</div>
-<script>
-    const ctx = document.getElementById('myChart').getContext('2d');
-    const labels = {
-
-    }
-    const myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['Organik', 'Kertas', 'Kayu', 'Kain', 'Karet/Kulit', 'Plastik', 'Logam', 'Gelas/Kaca', 'Lain-lain'],
-            datasets: [
-            {
-                label: 'P1',
-                data: [1, 0.25, 0.2, 0, 0, 0.6, 0.2, 0, 3.3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                ],
-                borderWidth: 1
-            },
-            ]
-        },
-        options: {
-            indexAxis: 'y',
-            elements: {
-                bar: {
-                  borderWidth: 2,
-                }
-            },
-        }
-    });
-</script>
-
+{% include 'partials/wasteData_housing.html' %}
 
   
+
 {% endblock content %}
+

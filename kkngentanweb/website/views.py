@@ -4,6 +4,7 @@ from .models import Activity
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 from django.http import JsonResponse
+import pandas as pd
 
 # Create your views here.
 class Home(View):
@@ -58,3 +59,27 @@ class Chart(View):
 class Dashboard(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'dashboard.html')
+
+class Testing(View):
+    # data = pd.read_csv('kkngentanweb\static\file\data_sampah-1.csv')
+    def get(self, request, *args, **kwargs):
+        # values = data.values
+        # keys = data.keys()
+
+        # listkeys = []
+        # listvalues = []
+
+        # for x in keys:
+        #     listkeys.append(x)
+        # for x in values:
+        #     listvalues.append(x)
+        
+        # values = pd.DataFrame(listvalues).to_dict(orient = 'records')
+        # keys = pd.DataFrame(listkeys).to_dict(orient = 'records')
+
+        # return render(request, 'testing.html',{
+        #     'values':values,
+        #     'keys':keys,
+        # })
+
+        return render(request, 'testing.html')
