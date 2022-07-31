@@ -22,19 +22,19 @@
             </a>
             <div class="hidden md:flex ml-[20px] space-x-[20px]">
                 <a href = "{% url 'website:home' %}" 
-                class="font-inter font-medium text-[18px] text-[#6C6C6C]
-                {% if navbar == 'home' %} font-bold text-[#F33737] {% endif %}">
+                class="font-inter font-medium text-[18px] text-[#9A9A9A] hover:text-[#6C6C6C]
+                {% if navbar == 'home' %} font-bold text-blue_bgdark {% endif %}">
                     Home
                 </a>
                 <a href = "{% url 'website:activity' %}" 
-                class="font-inter font-medium text-[18px] text-[#6C6C6C]
-                {% if navbar == 'activity' %} font-bold text-[#F33737] {% endif %}">
+                class="font-inter font-medium text-[18px] text-[#9A9A9A] hover:text-[#6C6C6C]
+                {% if navbar == 'activity' %} font-bold text-blue_bgdark {% endif %}">
                     Kegiatan
                 </a>
-                <a href = "#" class="font-inter font-medium text-[18px] text-[#6C6C6C]">
+                <a href = "#" class="font-inter font-medium text-[18px] text-[#9A9A9A] hover:text-[#6C6C6C]">
                     Layanan
                 </a>
-                <a href = "#" class="font-inter font-medium text-[18px] text-[#6C6C6C]">
+                <a href = "#" class="font-inter font-medium text-[18px] text-[#9A9A9A] hover:text-[#6C6C6C]">
                     Desa
                 </a>
             </div>
@@ -45,7 +45,7 @@
     
                 class="w-full py-[10px] pl-[20px] border-soft_grey border-[2px] rounded-[15px]
                 placeholder:text-[18px] placeholder:font-inter transition ease-in-out m-0 placeholder:font-medium
-                placeholder:text-[#BFBFBF] focus:text-gray-700 focus:bg-white focus:border-[#F33737]
+                placeholder:text-[#BFBFBF] focus:text-gray-700 focus:bg-white focus:border-blue_bgslate
                 focus: font-inter focus:outline-none focus:text-[16px]"
 
                 value="{{request.GET.q}}"
@@ -58,7 +58,7 @@
         <!-- Mobile menu button -->
          
     </div>
-    <div class="z-50 md:hidden bg-green-400">
+    <div class="z-50 md:hidden">
         <div class="hidden relative mobile-menu">
             <div class="fixed flex float-right mt-[30px]">
                 <div class="fixed h-auto w-auto rounded-[4px] pl-[15px] pr-[60px] py-[15px] bg-white">
