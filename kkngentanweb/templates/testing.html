@@ -9,9 +9,187 @@
 {% block content %}
 {% include 'partials/navbar.html' %}
 
-{% include 'partials/wasteData_housing.html' %}
+<body>
+    <div class="chartMenu">
+      <p>WWW.CHARTJS3.COM (Chart JS 3.8.2)</p>
+    </div>
+    <div class="chartCard">
+        <div class="chartBox w-[700px]">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+</body>
 
+<script>
+    // setup 
+    const data = {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        datasets: [{
+            label: 'Weekly Sales',
+            data: [18, 12, 6, 9, 12, 3, 9],
+            backgroundColor: [
+            'rgba(255, 26, 104, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)',
+            'rgba(0, 0, 0, 0.2)'
+            ],
+            borderColor: [
+            'rgba(255, 26, 104, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)',
+            'rgba(0, 0, 0, 1)'
+            ],
+            borderWidth: 1
+        }]
+    };
+
+    // config 
+    const config = {
+        type: 'bar',
+        data,
+        options: {
+            maintainAspectRation: false,
+            scales: {
+            y: {
+                beginAtZero: true
+            }
+            }
+        }
+    };
+
+    // render init block
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+</script>
+
+<div class="w-auto">
+    <ul id = "myTab" class="flex flex-row space-x-[5px] font-inter font-semibold text-[15px] items-center w-auto">
+        <li class="active  text-white py-[7px] px-[30px] rounded-[5px] bg-[#94ABD0]">
+            <a data-toggle="tab" data-target="#first" href="#first" id = "default">Hari 1</a>
+        </li>
+        <li class="py-[7px] px-[30px] rounded-[5px] text-[#94ABD0]">
+            <a data-toggle="tab" data-target="#second" href="#second">Hari 2</a>
+        </li>
+        <li class="py-[7px] px-[30px] rounded-[5px] text-[#94ABD0]">
+            <a data-toggle="tab" data-target="#third" href="#third">Hari 3</a>
+        </li>
+        <li class="py-[7px] px-[30px] rounded-[5px] text-[#94ABD0]">
+            <a data-toggle="tab" data-target="#fourth" href="#fourth">Hari 4</a>
+        </li>
+        <li class="py-[7px] px-[30px] rounded-[5px] text-[#94ABD0]">
+            <a data-toggle="tab" data-target="#fifth" href="#fifth">Hari 5</a>
+        </li>
+        <li class="py-[7px] px-[30px] rounded-[5px] text-[#94ABD0]">
+            <a data-toggle="tab" data-target="#sixth" href="#sixth">Hari 6</a>
+        </li>
+        <li class="py-[7px] px-[30px] rounded-[5px] text-[#94ABD0]">
+            <a data-toggle="tab" data-target="#seventh" href="#seventh">Hari 7</a>
+        </li>
+        <li class="py-[7px] px-[30px] rounded-[5px] text-[#94ABD0]">
+            <a data-toggle="tab" data-target="#eighth" href="#eighth">Hari 8</a>
+        </li>
+    </ul>
+</div>
+
+<body id="page-top">
+    <nav class="navbar">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+            <div class="sidebar-brand-logo">
+                <img src="" class="logo-full"></div>
+        </a>
+    </nav>
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="container d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content">
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <div class="tabControl">
+                        <div class="container">
+                            <ul class="hidden nav nav-pills nav-fill" id="pills-tab">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-1">Your Information</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-2" role="tab">Service Requirements</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-3" role="tab">Documents Needed</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-4" role="tab">Thank You!</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="pills-1">
+                                <h1> Tab 1 </h1>
+                                <button onclick = "testing()" class="btn btn-primary btnNext">
+                                    Next
+                                </button>
+                            </div>
+                            <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                <h1> Tab 2</h1>
+                                <div class="navbuttons">
+                                    <div class="col-6 col-sm-3" id="btnPrevious">
+                                        <a class="btn btn-primary btnPrevious">Previous</a>
+                                    </div>
+                                    <div class="col-6 col-sm-3" id="btnNext">
+                                        <a class="btn btn-primary btnNext">Next</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                <h1> Tab 3 </h1>
+                                <div class="navbuttons">
+                                    <div class="col-6 col-sm-3" id="btnPrevious">
+                                        <a class="btn btn-primary btnPrevious">Previous</a>
+                                    </div>
+                                    <div class="col-6 col-sm-3" id="btnNext">
+                                        <a class="btn btn-primary btnNext">Next</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-4" role="tabpanel" aria-labelledby="pills-contact-tab">Thank You</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      <!-- Bootstrap -->
+    
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+      <script src="https://kit.fontawesome.com/1b59bc20c8.js"></script>
+    
+    </body>
+    
+</html>
+
+<script>
+
+    function testing(){
+        $('.nav-pills .active').parent().next('li').find('a').trigger('click');
+    }
+
+    
+    $('.btnPrevious').click(function() {
+        $('.nav-pills .active').parent().prev('li').find('a').trigger('click');
+    });
+</script>
   
-
 {% endblock content %}
 

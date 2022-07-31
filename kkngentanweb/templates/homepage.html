@@ -4,31 +4,7 @@
     Home Page
 {% endblock title %}
     {% block others %}
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-            extend: {
-                fontFamily: {
-                inter: ['Inter']
-                },
-                aspectRatio: {
-                '4/3': '4 / 3',
-                '7/6': '7 / 6',
-                '5/9': '5 / 9',
-                '7/12': '7 / 12',
-                },
-                colors:{
-                    text_grey: '#6C6C6C',
-                    soft_grey: '#D9D9D9',
-                    light_grey: '#F5F5F5',
-                    primary_red: '#E61F1F',
-                    darker_red: '#BE1A1A',
-                }
-            }
-            }
-        }
-    </script>
+    {% include 'partials/others.html' %}
     {% endblock others %}
 
 {% block content %}
