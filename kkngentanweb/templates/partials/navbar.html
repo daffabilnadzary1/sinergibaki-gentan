@@ -31,8 +31,10 @@
                 {% if navbar == 'activity' %} font-bold text-blue_bgdark {% endif %}">
                     Kegiatan
                 </a>
-                <a href = "#" class="font-inter font-medium text-[18px] text-[#9A9A9A] hover:text-[#6C6C6C]">
-                    Layanan
+                <a href = "{% url 'website:dashboard' %}"
+                class="font-inter font-medium text-[18px] text-[#9A9A9A] hover:text-[#6C6C6C]
+                {% if navbar == 'dashboard' %} font-bold text-blue_bgdark {% endif %}">
+                    Dashboard
                 </a>
                 <a href = "#" class="font-inter font-medium text-[18px] text-[#9A9A9A] hover:text-[#6C6C6C]">
                     Desa
@@ -70,7 +72,7 @@
                             Kegiatan
                         </a>
                         <a href="#" class="font-inter font-medium text-[15px] text-text_grey hover:bg-text_grey hover:text-white transition duration-500">
-                            Layanan
+                            Dashboard
                         </a>
                         <a href="#" class="font-inter font-medium text-[15px] text-text_grey hover:bg-text_grey hover:text-white transition duration-500">
                             Data

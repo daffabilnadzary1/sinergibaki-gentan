@@ -14,7 +14,7 @@
         Hasil pencarian untuk "<span class = "text-primary_red">{{ request.GET.q }}</span>"
     </h1>
 {% else %}
-    <div class="h-auto bg-light_grey py-[15px]">
+    <div class="h-auto bg-blue_bgbase py-[15px]">
         <div class = "hidden md:flex w-full justify-center h-[300px] overflow-clip overflow-x-scroll">
             <a href="#" class = "h-full mr-[25px] bg-blue-700 aspect-video rounded-[20px]">
                 <img src="{% static 'image/20220713_082023.jpg' %}" alt="" class="article h-full object-cover rounded-[20px]">
@@ -35,7 +35,7 @@
     </h1>
 {% endif %}
 
-<div class="rounded-[20px] bg-light_grey mt-[20px] mx-[30px] pt-[20px] px-[20px] pb-[50px]">
+<div class="rounded-[20px] bg-blue_bgbase mt-[20px] mx-[30px] pt-[20px] px-[20px] pb-[50px]">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
         {% for activity in activities %}
             <a href="{{ activity.get_absolute_url }}" class="">
