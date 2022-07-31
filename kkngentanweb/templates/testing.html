@@ -4,40 +4,7 @@
     Activity
 {% endblock title %}
     {% block others %}
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-            extend: {
-                fontFamily: {
-                inter: ['Inter']
-                },
-                aspectRatio: {
-                '4/3': '4 / 3',
-                '7/6': '7 / 6',
-                '5/9': '5 / 9',
-                '7/12': '7 / 12',
-                '5/8': '5 / 8',
-                },
-                colors:{
-                    text_grey: '#6C6C6C',
-                    soft_grey: '#D9D9D9',
-                    light_grey: '#F5F5F5',
-                    primary_red: '#E61F1F',
-                    darker_red: '#BE1A1A',
-                    dark_section_grey: '#2F2F2F',
-                }
-            }
-            }
-        }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    {% include 'partials/others.html' %}
     {% endblock others %}
 {% block content %}
 {% include 'partials/navbar.html' %}

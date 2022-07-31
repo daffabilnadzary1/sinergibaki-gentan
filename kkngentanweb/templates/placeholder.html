@@ -275,6 +275,36 @@
     </div>
 </div>
 
+<script>
+    let tabsContainer = document.querySelector("#tabs");
+    let tabTogglers = tabsContainer.querySelectorAll("#tabs a");
+
+    console.log(tabTogglers);
+
+    tabTogglers.forEach(function(toggler) {
+    toggler.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        let tabName = this.getAttribute("href");
+
+        let tabContents = document.querySelector("#tab-contents");
+
+        for (let i = 0; i < tabContents.children.length; i++) {
+        
+        tabTogglers[i].parentElement.classList.remove("bg-[#FF7676]", "shadow-lg", "shadow-[#FF7676]/20", "text-white"); 
+        tabTogglers[i].parentElement.classList.add("text-text_grey");
+        tabContents.children[i].classList.remove("hidden");
+        if ("#" + tabContents.children[i].id === tabName) {
+            continue;
+        }
+        tabContents.children[i].classList.add("hidden");
+        
+        }
+        e.target.parentElement.classList.add("bg-[#FF7676]", "shadow-lg", "shadow-[#FF7676]/20", "text-white");
+    });
+    });
+</script>
+
 {% comment %} <div class="rounded border w-1/2 mx-auto mt-4">
     <div class="flex flex-row p-[5px] bg-white drop-shadow-lg rounded-[10px]">
         <ul id = "tabs" class="flex flex-col space-y-[8px] bg-light_grey items-center">
@@ -378,33 +408,3 @@
         </div>
     </div>
 </div> {% endcomment %}
-
-<script>
-    let tabsContainer = document.querySelector("#tabs");
-    let tabTogglers = tabsContainer.querySelectorAll("#tabs a");
-
-    console.log(tabTogglers);
-
-    tabTogglers.forEach(function(toggler) {
-    toggler.addEventListener("click", function(e) {
-        e.preventDefault();
-
-        let tabName = this.getAttribute("href");
-
-        let tabContents = document.querySelector("#tab-contents");
-
-        for (let i = 0; i < tabContents.children.length; i++) {
-        
-        tabTogglers[i].parentElement.classList.remove("bg-[#FF7676]", "shadow-lg", "shadow-[#FF7676]/20", "text-white"); 
-        tabTogglers[i].parentElement.classList.add("text-text_grey");
-        tabContents.children[i].classList.remove("hidden");
-        if ("#" + tabContents.children[i].id === tabName) {
-            continue;
-        }
-        tabContents.children[i].classList.add("hidden");
-        
-        }
-        e.target.parentElement.classList.add("bg-[#FF7676]", "shadow-lg", "shadow-[#FF7676]/20", "text-white");
-    });
-    });
-</script>
