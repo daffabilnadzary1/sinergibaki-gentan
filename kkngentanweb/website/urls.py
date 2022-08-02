@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import Home, ActivityList, ActivityDetail, Testing, Dashboard
+from .views import Home, ActivityList, ActivityDetail, Testing, Dashboard, SurveySampah
 
 app_name = 'website'
 
@@ -9,4 +9,5 @@ urlpatterns = [
     path('activity/<slug:activity>', ActivityDetail.as_view(), name = 'activityDetail'),
     path('testing/', Testing.as_view(), name ='testing'),
     path('dashboard/', Dashboard.as_view(), name = 'dashboard'),
+    path('survey-sampah/', SurveySampah.as_view(), name = 'surveysampah'),
 ]

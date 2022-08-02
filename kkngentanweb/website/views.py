@@ -62,3 +62,7 @@ class Dashboard(View):
             'navbar': 'dashboard',
         })
 
+class SurveySampah(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, "surveysampah.html")
+
