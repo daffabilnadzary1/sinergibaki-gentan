@@ -1,23 +1,10 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block title %}
-    Activity
-{% endblock title %}
-    {% block others %}
-    {% include 'partials/others.html' %}
-    {% endblock others %}
-{% block content %}
-{% include 'partials/navbar.html' %}
-
-{% load static %}
-
 {% load static %}
 
 <div class="flex flex-row justify-center space-x-[30px]">
     <div class="w-full bg-white rounded-[10px] drop-shadow-lg">
         <div class="flex flex-col px-[20px] py-[20px] space-y-[30px]">
             <h1 class="font-bold font-inter text-[25px]">
-                Data Survey Sampah Perumahan
+                Data Survey Sampah Non Perumahan
             </h1>
             <div class="grow">
                 <div class="p-[5px] bg-blue_bgnavbase rounded-[10px]">
@@ -138,27 +125,27 @@
         },
     };
 
-    const chartLabels = ['Organik', 'Kertas', 'Kayu', 'Kain', 'Karet/Kulit', 'Plastik', 'Logam', 'Gelas/Kaca', 'Lain-lain'];
+    const chartLabels2 = ['Organik', 'Kertas', 'Kayu', 'Kain', 'Karet/Kulit', 'Plastik', 'Logam', 'Gelas/Kaca', 'Lain-lain'];
 
     console.log(tabTogglers2);
 
-    tabTogglers2.forEach(function(toggler) {
-    toggler.addEventListener("click", function(e) {
+    tabTogglers2.forEach(function(toggler2) {
+    toggler2.addEventListener("click", function(e) {
         e.preventDefault();
 
-        let tabName = this.getAttribute("href");
+        let tabName2 = this.getAttribute("href");
 
-        let tabContents = document.querySelector("#tab-contents2");
+        let tabContents2 = document.querySelector("#tab-contents2");
 
-        for (let i = 0; i < tabContents.children.length; i++) {
+        for (let i = 0; i < tabContents2.children.length; i++) {
         
             tabTogglers2[i].parentElement.classList.remove("bg-[#94ABD0]", "text-white"); 
             tabTogglers2[i].parentElement.classList.add("text-[#94ABD0]");
-            tabContents.children[i].classList.remove("hidden");
-            if ("#" + tabContents.children[i].id === tabName) {
+            tabContents2.children[i].classList.remove("hidden");
+            if ("#" + tabContents2.children[i].id === tabName2) {
                 continue;
             }
-            tabContents.children[i].classList.add("hidden");
+            tabContents2.children[i].classList.add("hidden");
         
         }
         e.target.parentElement.classList.remove("text-[#94ABD0]");
@@ -178,7 +165,7 @@
     var data2Chart_1 = new Chart(ctx2_1, {
         type: 'bar',
         data: {
-            labels: chartLabels,
+            labels: chartLabels2,
             datasets: [
             {
                 label: 'Grha Setyowati',
@@ -244,7 +231,7 @@
     var data2Chart_2 = new Chart(ctx2_2, {
         type: 'bar',
         data: {
-            labels: chartLabels,
+            labels: chartLabels2,
             datasets: [
             {
                 label: 'Grha Setyowati',
@@ -310,7 +297,7 @@
     var data2Chart_3 = new Chart(ctx2_3, {
         type: 'bar',
         data: {
-            labels: chartLabels,
+            labels: chartLabels2,
             datasets: [
             {
                 label: 'Grha Setyowati',
@@ -376,7 +363,7 @@
     var data2Chart_4 = new Chart(ctx2_4, {
         type: 'bar',
         data: {
-            labels: chartLabels,
+            labels: chartLabels2,
             datasets: [
             {
                 label: 'Grha Setyowati',
@@ -442,7 +429,7 @@
     var data2Chart_5 = new Chart(ctx2_5, {
         type: 'bar',
         data: {
-            labels: chartLabels,
+            labels: chartLabels2,
             datasets: [
             {
                 label: 'Grha Setyowati',
@@ -508,7 +495,7 @@
     var data2Chart_6 = new Chart(ctx2_6, {
         type: 'bar',
         data: {
-            labels: chartLabels,
+            labels: chartLabels2,
             datasets: [
             {
                 label: 'Grha Setyowati',
@@ -574,7 +561,7 @@
     var data2Chart_7 = new Chart(ctx2_7, {
         type: 'bar',
         data: {
-            labels: chartLabels,
+            labels: chartLabels2,
             datasets: [
             {
                 label: 'Grha Setyowati',
@@ -640,7 +627,7 @@
     var data2Chart_8 = new Chart(ctx2_8, {
         type: 'bar',
         data: {
-            labels: chartLabels,
+            labels: chartLabels2,
             datasets: [
             {
                 label: 'Grha Setyowati',
@@ -730,6 +717,3 @@
     }
 
 </script>
-  
-{% endblock content %}
-

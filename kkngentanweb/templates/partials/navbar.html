@@ -17,23 +17,23 @@
             </button>
         </div> 
         <div class="w-auto h-full flex items-center">
-            <a href="#" class = "h-full">
+            <a href="{% url 'website:home' %}" class = "h-full">
                 <img src="{% static 'logo/logo_desagentan.png' %}" alt="">
             </a>
             <div class="hidden md:flex ml-[20px] space-x-[20px]">
                 <a href = "{% url 'website:home' %}" 
                 class="font-inter font-medium text-[18px] text-[#9A9A9A] hover:text-[#6C6C6C]
-                {% if navbar == 'home' %} font-bold text-blue_bgdark {% endif %}">
+                {% if navbar == 'home' %} font-bold text-blue_bgdark hover:text-blue_bgdark {% endif %}">
                     Home
                 </a>
                 <a href = "{% url 'website:activity' %}" 
                 class="font-inter font-medium text-[18px] text-[#9A9A9A] hover:text-[#6C6C6C]
-                {% if navbar == 'activity' %} font-bold text-blue_bgdark {% endif %}">
+                {% if navbar == 'activity' %} font-bold text-blue_bgdark hover:text-blue_bgdark {% endif %}">
                     Kegiatan
                 </a>
                 <a href = "{% url 'website:dashboard' %}"
                 class="font-inter font-medium text-[18px] text-[#9A9A9A] hover:text-[#6C6C6C]
-                {% if navbar == 'dashboard' %} font-bold text-blue_bgdark {% endif %}">
+                {% if navbar == 'dashboard' %} font-bold text-blue_bgdark hover:text-blue_bgdark {% endif %}">
                     Dashboard
                 </a>
                 <a href = "#" class="font-inter font-medium text-[18px] text-[#9A9A9A] hover:text-[#6C6C6C]">
@@ -65,13 +65,13 @@
             <div class="fixed flex float-right mt-[30px]">
                 <div class="fixed h-auto w-auto rounded-[4px] pl-[15px] pr-[60px] py-[15px] bg-white">
                     <div class="flex flex-col space-y-[8px]">
-                        <a href="#" class="font-inter font-medium text-[15px] text-text_grey hover:bg-text_grey hover:text-white transition duration-500">
+                        <a href="{% url 'website:home' %}" class="font-inter font-medium text-[15px] text-text_grey hover:bg-text_grey hover:text-white transition duration-500">
                             Home
                         </a>
-                        <a href="#" class="font-inter font-medium text-[15px] text-text_grey hover:bg-text_grey hover:text-white transition duration-500">
+                        <a href="{% url 'website:activity' %}" class="font-inter font-medium text-[15px] text-text_grey hover:bg-text_grey hover:text-white transition duration-500">
                             Kegiatan
                         </a>
-                        <a href="#" class="font-inter font-medium text-[15px] text-text_grey hover:bg-text_grey hover:text-white transition duration-500">
+                        <a href="{% url 'website:dashboard' %}" class="font-inter font-medium text-[15px] text-text_grey hover:bg-text_grey hover:text-white transition duration-500">
                             Dashboard
                         </a>
                         <a href="#" class="font-inter font-medium text-[15px] text-text_grey hover:bg-text_grey hover:text-white transition duration-500">
