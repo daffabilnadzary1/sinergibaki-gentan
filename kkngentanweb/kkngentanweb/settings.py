@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'website',
     'ckeditor',
     'ckeditor_uploader',
+    'embed_video',
 
     'django_browser_reload',
     'tailwind',
