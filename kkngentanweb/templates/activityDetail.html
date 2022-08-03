@@ -42,7 +42,7 @@
             </h1>
             <div class="flex flex-col space-y-[10px] w-full h-auto mb-[50px]">
                 {% for activity_latest in activities %}
-                    <div class="flex w-full aspect-7/2 bg-white rounded-[10px]">
+                    <a href = "{{ activity_latest.get_absolute_url }}" class="flex w-full aspect-7/2 bg-white rounded-[10px] transition ease-in-out hover:-translate-y-1 lg:hover:translate-x-1 hover:scale-102 duration-250">
                         <img src="{{ activity_latest.image.url }}" class="flex-none rounded-[10px] h-full w-[45%] bg-slate-500 object-cover"></img>
                         <div class="m-[10px] md:m-[20px] lg:m-[10px]">
                             <h1 class="font-inter font-base text-[10px] md:text-[15px] lg:text-[10px] text-[#5B5B5B]">
@@ -52,7 +52,7 @@
                                 {{activity_latest.title|truncatechars:95}}
                             </h1>
                         </div>
-                    </div>
+                    </a>
                 {% endfor %}
             </div>
             <h1 class="font-inter font-bold text-[25px] mb-[20px]">

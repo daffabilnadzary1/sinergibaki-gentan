@@ -4,7 +4,7 @@
     <div class="flex flex-col lg:flex-row space-y-[40px] lg:space-x-[40px] lg:space-y-0">
         <div class="flex flex-col space-y-[15px] lg:space-y-[30px] lg:w-[60%]">
             <div class="flex flex-row space-x-[20px] items-center">
-                <div class="bg-slate-300 rounded-[10px] w-[60px] aspect-square"></div>
+                <img class="bg-transparent rounded-[10px] w-[60px] aspect-square" src = "{% static 'logo/logo_sukoharjo.png' %}"></img>
                 <h1 class="font-inter font-semibold text-[25px] text-white">
                     KKN Desa Gentan
                 </h1>
@@ -18,9 +18,9 @@
                 Pelajari Lebih Lanjut
             </h1>
             <div class="flex flex-col space-y-[5px] lg:space-y-[8px] font-inter font-base text-[16px] text-white">
-                <a href="#" class="hover:text-slate-300">Info desa</a>
-                <a href="#" class="hover:text-slate-300">Kegiatan</a>
-                <a href="#" class="hover:text-slate-300">Dashboard</a>
+                <a href="{% url 'website:home' %}" class="hover:text-slate-300">Info desa</a>
+                <a href="{% url 'website:activity' %}" class="hover:text-slate-300">Kegiatan</a>
+                <a href="{% url 'website:dashboard' %}" class="hover:text-slate-300">Dashboard</a>
                 <a href="#" class="hover:text-slate-300">Peta</a>
             </div>
         </div>
@@ -30,16 +30,20 @@
             </h1>
             <div class="flex flex-col space-y-[20px]">
                 <div class="flex flex-row items-center space-x-[15px]">
-                    <div class="aspect-square w-[30px] rounded-[5px] bg-slate-300">
-
+                    <div class="aspect-square w-[30px] rounded-[5px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" viewBox="0 0 36 36">
+                            <path stroke="#fff" stroke-miterlimit="10" stroke-width="3" d="M31.428 29.269H4.558A2.557 2.557 0 0 1 2 26.712V9.542A2.542 2.542 0 0 1 4.557 7h26.871a2.543 2.543 0 0 1 2.543 2.543v17.169a2.541 2.541 0 0 1-2.543 2.557ZM31.253 7H4.762a2.732 2.732 0 0 0-2.733 2.718l13.53 9.308a4.968 4.968 0 0 0 5.086 0l2.381-1.637L34 9.5A2.718 2.718 0 0 0 31.253 7Z"/>
+                        </svg>
                     </div>
                     <h1 class="font-inter font-base text-[18px] text-white hover:text-slate-300">
-                        loremipsum@gmail.com
+                        kkn.ppm.ugm.sinergibaki@gmail.com
                     </h1>
                 </div>
                 <div class="flex flex-row items-center space-x-[15px]">
-                    <div class="aspect-square w-[30px] rounded-[5px] bg-slate-300">
-
+                    <div class="aspect-square w-[30px] rounded-[5px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" viewBox="0 0 36 36">
+                            <path fill="#fff" fill-rule="evenodd" d="M29.338 6.65A15.87 15.87 0 0 0 18.067 2C9.284 2 2.137 9.113 2.134 17.857a15.774 15.774 0 0 0 2.126 7.928L2 34.002l8.446-2.205a15.98 15.98 0 0 0 7.614 1.93h.007c8.781 0 15.93-7.114 15.933-15.857a15.727 15.727 0 0 0-4.662-11.22Zm-4.287.005a13.2 13.2 0 0 0-6.98-1.977c-2.598 0-5.023.749-7.07 2.04-3.621 2.32-6.024 6.367-6.026 10.96 0 2.463.691 4.86 2.002 6.935l.311.492-1.323 4.808 4.955-1.293.478.282a13.12 13.12 0 0 0 6.663 1.817h.005c7.216 0 13.088-5.846 13.091-13.03a12.921 12.921 0 0 0-3.83-9.217 13.193 13.193 0 0 0-2.276-1.817Zm-10.921 4.47c-.295-.653-.606-.666-.886-.677-.217-.01-.463-.01-.711-.01h-.043c-.263 0-.689.099-1.05.491l-.076.082c-.41.435-1.301 1.381-1.301 3.186 0 1.914 1.39 3.764 1.603 4.046l.004.006.085.122c.503.743 2.94 4.34 6.637 5.792 3.005 1.18 3.847 1.08 4.514 1.003a8.67 8.67 0 0 1 .209-.023c.722-.065 2.328-.948 2.656-1.863.328-.914.328-1.699.23-1.862-.08-.132-.265-.22-.54-.353a15.934 15.934 0 0 1-.214-.105c-.394-.195-2.329-1.143-2.69-1.274-.36-.13-.623-.196-.885.196-.263.392-1.016 1.274-1.246 1.536-.23.262-.46.294-.853.098a5.814 5.814 0 0 0-.261-.117 10.18 10.18 0 0 1-2.903-1.827c-1.17-1.039-1.96-2.321-2.19-2.714-.23-.391-.024-.604.173-.8.118-.116.254-.28.39-.445.067-.082.135-.164.2-.24a2.23 2.23 0 0 0 .338-.542l.056-.111c.13-.262.065-.49-.033-.687-.042-.083-.204-.48-.403-.968a73.42 73.42 0 0 0-.81-1.94Z" clip-rule="evenodd"/>
+                        </svg>
                     </div>
                     <h1 class="font-inter font-base text-[18px] text-white hover:text-slate-300">
                         0821-xxxx-xxxx

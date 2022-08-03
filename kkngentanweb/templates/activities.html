@@ -22,7 +22,7 @@
 <div class="rounded-[20px] bg-blue_bgbase mt-[20px] mx-[30px] pt-[20px] px-[20px] pb-[50px]">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
         {% for activity in activities %}
-            <a href="{{ activity.get_absolute_url }}" class="">
+            <a href="{{ activity.get_absolute_url }}" class="transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-250">
                 <div class="rounded-[15px] flex flex-row md:flex-col overflow-hidden shadow-lg">
                   <img class="w-[50%] md:w-full aspect-video object-cover" src="{{ activity.image.url }}" alt="Activity">
                   <div class="w-full flex flex-col space-y-[25px] lg:space-y-[40px] px-[20px] py-[15px] bg-white">

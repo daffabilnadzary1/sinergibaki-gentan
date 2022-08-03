@@ -7,7 +7,7 @@
             <div class="aspect-square h-auto">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 26 26">
                     <g clip-path="url(#a)">
-                    <path fill="#315287" fill-rule="evenodd" d="M2.563 10.938 11.5 2l2.063 2.063L4.624 13l8.938 8.938L11.5 24l-8.938-8.938L.5 13l2.063-2.063Z" clip-rule="evenodd"/>
+                    <path fill="#6F86AA" fill-rule="evenodd" d="M2.563 10.938 11.5 2l2.063 2.063L4.624 13l8.938 8.938L11.5 24l-8.938-8.938L.5 13l2.063-2.063Z" clip-rule="evenodd"/>
                     </g>
                     <defs>
                     <clipPath id="a">
@@ -16,7 +16,7 @@
                     </defs>
                 </svg>
             </div>
-            <h1 class="font-inter font-bold text-[20px] text-blue_bgdarker">
+            <h1 class="font-inter font-bold text-[20px] text-blue_bgprimary hover:text-blue_bgdark">
                 Prev
             </h1>
         </a>
@@ -46,22 +46,22 @@
                     <h1 class="font-bold font-inter text-[25px] text-white">{{ i }}</h1>
                 </div>
             {% else %}
-                <a class="bg-white rounded-[10px] border-[2px] border-blue_bgdark px-[18px] aspect-square flex items-center"
+                <a class="bg-white hover:bg-slate-100 rounded-[10px] border-[2px] border-blue_bgdark px-[18px] aspect-square flex items-center hover:border-blue_bgdarker"
                 href="?page={{ i }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">
-                    <h1 class="font-bold font-inter text-[25px]">{{ i }}</h1>
+                    <h1 class="font-bold font-inter text-[25px] text-blue_bgdark hover:text-blue_bgdarker">{{ i }}</h1>
                 </a>
             {% endif %}
         {% endfor %}
     </div>
     {% if page.has_next %}
         <a class="h-auto flex flex-row items-center space-x-0" href = "?page={{ page.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">
-            <h1 class="font-inter font-bold text-[20px] text-blue_bgdarker">
+            <h1 class="font-inter font-bold text-[20px] text-blue_bgprimary hover:text-blue_bgdark">
                 Next
             </h1>
             <div class="aspect-square h-auto">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 26 26">
                     <g clip-path="url(#a)">
-                    <path fill="#315287" fill-rule="evenodd" d="M23.541 10.938 14.604 2 12.54 4.063 21.48 13l-8.938 8.938L14.604 24l8.937-8.938L25.604 13l-2.063-2.063Z" clip-rule="evenodd"/>
+                    <path fill="#6F86AA" fill-rule="evenodd" d="M23.541 10.938 14.604 2 12.54 4.063 21.48 13l-8.938 8.938L14.604 24l8.937-8.938L25.604 13l-2.063-2.063Z" clip-rule="evenodd"/>
                     </g>
                     <defs>
                     <clipPath id="a">
