@@ -12,12 +12,76 @@
 {% include 'partials/navbar.html' %}
 
 <div class="h-auto px-[40px] py-[20px] lg:py-[60px] lg:px-[80px]" style="background-image: url('{% static 'image/pic_LandingBg.png' %}');">
-    <div class="flex flex-col justify-center space-y-[25px]">
-        <h1 class="font-inter font-bold text-[60px] text-blue_bgsoft text-center">
-            Survey Sampah
+    <div class="flex flex-col justify-center space-y-[40px] lg:space-y-[25px]">
+        <h1 class="grow-0 font-inter font-bold text-[40px] lg:text-[60px] text-white text-center">
+            Survey <span class = "text-blue_bgsoft">Sampah</span>
         </h1>
-        <div class="w-[750px] self-center aspect-video bg-slate-300 rounded-[15px]"></div>
+        <div class="w-[400px] md:w-[600px] lg:w-[750px] self-center aspect-video bg-slate-300 rounded-[15px] drop-shadow-lg"></div>
     </div>
 </div>
+
+<div class="mt-[20px] lg:mt-[30px] h-auto py-[20px] px-[40px] lg:py-[60px] lg:px-[100px] bg-light_grey">
+    <div class="flex flex-col w-full h-full justify-center items-center space-y-[40px]">
+        <h1 class="text-center font-bold font-inter text-blue_bgdark text-[35px] lg:text-[50px]">
+            Timeline Kegiatan
+        </h1>
+        <div class="grid grid-cols-1 lg:grid-cols-4 space-y-[20px] lg:space-y-[0px] lg:space-x-[20px] px-[30px] lg:px-0">
+            <div class="transition ease-in-out hover:-translate-y-1 lg:hover:translate-x-1 hover:scale-105 duration-250 flex flex-col items-center lg:items-start justify-between space-y-[15px] py-[10px] px-[10px] lg:px-0 lg:pl-[10px] bg-white rounded-[10px] drop-shadow-lg">
+                <h1 class="font-inter text-center lg:text-left lg:w-[60%] font-bold text-[20px] text-blue_bgdark">
+                    Rapat Koordinasi Pelaksanaan
+                </h1>
+                <p class="font-inter font-medium text-[15px] text-blue_bgdark">
+                    3 Juli 2022
+                </p>
+            </div>
+            <div class="transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-250 flex flex-col items-center lg:items-start justify-between space-y-[15px] py-[10px] px-[10px] lg:px-0 lg:pl-[10px] bg-white rounded-[10px] drop-shadow-lg">
+                <h1 class="font-inter text-center lg:text-left lg:w-[60%] font-bold text-[20px] text-blue_bgdark">
+                    Pemberitahuan dan Pendataan Lokasi Survey
+                </h1>
+                <p class="font-inter font-medium text-[15px] text-blue_bgdark">
+                    5-6 Juli 2022
+                </p>
+            </div>
+            <div class="transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-250 flex flex-col items-center lg:items-start justify-between space-y-[15px] py-[10px] px-[10px] lg:px-0 lg:pl-[10px] bg-white rounded-[10px] drop-shadow-lg">
+                <h1 class="font-inter text-center lg:text-left lg:w-[60%] font-bold text-[20px] text-blue_bgdark">
+                    Pelaksanaan dan Pemilahan Survey Sampah
+                </h1>
+                <p class="font-inter font-medium text-[15px] text-blue_bgdark">
+                    11-18 Juli 2022
+                </p>
+            </div>
+            <div class="transition ease-in-out hover:-translate-y-1 lg:hover:-translate-x-1 hover:scale-105 duration-250 flex flex-col items-center lg:items-start justify-between space-y-[15px] py-[10px] px-[10px] lg:px-0 lg:pl-[10px] bg-white rounded-[10px] drop-shadow-lg">
+                <h1 class="font-inter text-center lg:text-left lg:w-[60%] font-bold text-[20px] text-blue_bgdark">
+                    Pendataan dan Evaluasi
+                </h1>
+                <p class="font-inter font-medium text-[15px] text-blue_bgdark">
+                    20 Juli 2022
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-[20px] lg:mt-[30px] h-auto py-[20px] px-[40px] lg:py-[60px] lg:px-[100px] bg-light_grey">
+    <div class="flex flex-col lg:flex-row w-full h-full justify-center lg:items-center">
+        <div class="place-self-center h-full w-full md:w-[60%] lg:w-5/12 aspect-4/3 bg-slate-400 rounded-[30px]"></div>
+        <div class="mt-[10px] lg:mt-0 flex flex-col lg:ml-[50px] lg:w-7/12 space-y-[5px] lg:space-y-[15px] h-full">
+            <h1 class="text-center lg:text-left font-bold font-inter text-blue_bgdark text-[35px] lg:text-[50px]">
+                Timeline Kegiatan
+            </h1>
+            <div class="flex flex-col space-y-[20px] md:space-y-[30px]">
+                <p class="text-center lg:text-left leading-7 font-inter font-medium text-text_grey text-[16px] lg:text-[20px]">
+                    Salah satu program utama dari KKN-PPM UGM Sinergi Baki adalah pelaksanaan survey sampah yang dilakukan selama 8 hari dengan mengambil sampah dari 10 rumah dan 8 non-perumahan sebagai sampel. 
+                </p>
+                <div class="flex justify-center lg:justify-start">
+                    <a href="{% url 'website:surveysampah' %}" class="px-[35px] lg:px-[25px] py-[10px] font-inter font-medium text-[15px] text-white bg-blue_bgdark hover:bg-blue_bgdarker rounded-[8px]">
+                        Selengkapnya
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'partials/footer.html' %}
 
 {% endblock content%}
