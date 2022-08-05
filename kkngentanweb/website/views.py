@@ -5,6 +5,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 from django.http import JsonResponse
 import pandas as pd
+import folium 
 
 # Create your views here.
 class Home(View):
@@ -66,3 +67,12 @@ class SurveySampah(View):
     def get(self, request, *args, **kwargs):
         return render(request, "surveysampah.html")
 
+class Map(View):
+    def get(self, request, *args, **kwargs):
+        #creating a Map object
+
+        m = folium.Map()
+        m = m._repr_html_()
+        return render(request, "map.html",{
+            'm':m,
+        })
