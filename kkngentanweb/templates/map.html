@@ -15,12 +15,14 @@
 <div class="h-auto px-[40px] py-[20px] lg:py-[60px] lg:px-[80px]" style="background-image: url('{% static 'image/pic_LandingBg.png' %}');">
     <div class="flex flex-col justify-center space-y-[40px] lg:space-y-[25px]">
         <h1 class="grow-0 font-inter font-bold text-[40px] lg:text-[60px] text-white text-center drop-shadow-md">
-            Survey <span class = "text-blue_bgsoft">Sampah</span>
+            Peta <span class = "text-blue_bgsoft">Desa Gentan</span>
         </h1>
         <div class="w-[400px] md:w-[600px] lg:w-[750px] self-center aspect-video bg-slate-300 rounded-[15px] drop-shadow-lg overflow-hidden">
             {{m | safe}}
         </div>
     </div>
 </div>
+
+{% include 'partials/footer.html' %}
 
 {% endblock content %}

@@ -36,7 +36,8 @@
                 {% if navbar == 'dashboard' %} font-bold text-blue_bgdark hover:text-blue_bgdark {% endif %}">
                     Dashboard
                 </a>
-                <a href = "#" class="font-inter font-medium text-[18px] text-[#9A9A9A] hover:text-[#6C6C6C]">
+                <a href = "{% url 'website:map' %}" class="font-inter font-medium text-[18px] text-[#9A9A9A] hover:text-[#6C6C6C]
+                {% if navbar == 'map' %} font-bold text-blue_bgdark hover:text-blue_bgdark {% endif %}">
                     Peta
                 </a>
             </div>
@@ -74,7 +75,7 @@
                         <a href="{% url 'website:dashboard' %}" class="font-inter font-medium text-[15px] text-text_grey hover:bg-text_grey hover:text-white transition duration-500">
                             Dashboard
                         </a>
-                        <a href="#" class="font-inter font-medium text-[15px] text-text_grey hover:bg-text_grey hover:text-white transition duration-500">
+                        <a href="{% url 'website:map' %}" class="font-inter font-medium text-[15px] text-text_grey hover:bg-text_grey hover:text-white transition duration-500">
                             Peta
                         </a>
                     </div>

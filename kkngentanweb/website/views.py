@@ -6,6 +6,7 @@ from django.db.models import Q
 from django.http import JsonResponse
 import pandas as pd
 import folium 
+import geocoder
 
 # Create your views here.
 class Home(View):
@@ -70,9 +71,12 @@ class SurveySampah(View):
 class Map(View):
     def get(self, request, *args, **kwargs):
         #creating a Map object
+        m = folium.Map(location = [-7.57908,110.78338], zoom_start=16)
 
-        m = folium.Map()
+        folium.Marker([-7.57908,110.78338], tooltip='Kelurahan Desa Gentan', popup='Kelurahan Desa Gentan').add_to(m)
+
         m = m._repr_html_()
         return render(request, "map.html",{
             'm':m,
+            'navbar':'map',
         })
