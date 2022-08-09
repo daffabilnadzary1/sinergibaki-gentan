@@ -1,1 +1,1 @@
-web: gunicorn kkngentanweb.wsgi --log-file -
+web: gunicorn kkngentanweb.wsgi --log-file=-
