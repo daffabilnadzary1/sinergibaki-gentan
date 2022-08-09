@@ -13,6 +13,51 @@
 
 {% load static %}
 
+
+{% comment %} <div class="w-[80vw] h-[80vh] relative m-auto bg-slate-300">
+    {% comment %} <canvas id = "data2-chart-1"></canvas> 
+</div> {% endcomment %}
+
+<script>
+    var data = {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+        datasets: [{
+            label: "Dataset #1",
+            backgroundColor: "rgba(255,99,132,0.2)",
+            borderColor: "rgba(255,99,132,1)",
+            borderWidth: 2,
+            hoverBackgroundColor: "rgba(255,99,132,0.4)",
+            hoverBorderColor: "rgba(255,99,132,1)",
+            data: [65, 59, 20, 81, 56, 55, 40],
+        }]
+    };
+        
+    var options = {
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+            stacked: true,
+            grid: {
+                display: true,
+                color: "rgba(255,99,132,0.2)"
+            }
+            },
+            x: {
+            grid: {
+                display: false
+            }
+            }
+        }
+    };
+        
+    new Chart('chart', {
+        type: 'bar',
+        options: options,
+        data: data
+    });
+</script>
+
+
 <div class="flex flex-row justify-center space-x-[30px]">
     <div class="w-full bg-white rounded-[10px] drop-shadow-lg">
         <div class="flex flex-col px-[20px] py-[20px] space-y-[30px]">
@@ -21,79 +66,95 @@
             </h1>
             <div class="grow">
                 <div class="p-[5px] bg-blue_bgnavbase rounded-[10px]">
-                    <ul id = "myTab2" class="nav-page flex flex-row space-x-[5px] font-inter font-semibold text-[15px] items-center w-auto">
-                        <li class="text-white py-[7px] px-[30px] rounded-[5px] bg-[#94ABD0]">
+                    <ul id = "myTab2" class="nav-page grid justify-items-center grid-cols-5 md:grid-cols-8 space-x-[5px] font-inter font-semibold text-[12px] md:text-[13px] lg:text-[15px] items-center w-auto">
+                        <li class="text-white py-[7px] px-[15px] md:px-[20px] lg:px-[30px] rounded-[5px] bg-[#94ABD0]">
                             <a class = "active" data-toggle="tab" data-target="#first" href="#first" id = "default">Hari 1</a>
                         </li>
-                        <li class="py-[7px] px-[30px] rounded-[5px] text-[#94ABD0]">
+                        <li class="py-[7px] px-[15px] md:px-[20px] lg:px-[30px] rounded-[5px] text-[#94ABD0]">
                             <a data-toggle="tab" data-target="#second" href="#second">Hari 2</a>
                         </li>
-                        <li class="py-[7px] px-[30px] rounded-[5px] text-[#94ABD0]">
+                        <li class="py-[7px] px-[15px] md:px-[20px] lg:px-[30px] rounded-[5px] text-[#94ABD0]">
                             <a data-toggle="tab" data-target="#third" href="#third">Hari 3</a>
                         </li>
-                        <li class="py-[7px] px-[30px] rounded-[5px] text-[#94ABD0]">
+                        <li class="py-[7px] px-[15px] md:px-[20px] lg:px-[30px] rounded-[5px] text-[#94ABD0]">
                             <a data-toggle="tab" data-target="#fourth" href="#fourth">Hari 4</a>
                         </li>
-                        <li class="py-[7px] px-[30px] rounded-[5px] text-[#94ABD0]">
+                        <li class="py-[7px] px-[15px] md:px-[20px] lg:px-[30px] rounded-[5px] text-[#94ABD0]">
                             <a data-toggle="tab" data-target="#fifth" href="#fifth">Hari 5</a>
                         </li>
-                        <li class="py-[7px] px-[30px] rounded-[5px] text-[#94ABD0]">
+                        <li class="py-[7px] px-[15px] md:px-[20px] lg:px-[30px] rounded-[5px] text-[#94ABD0]">
                             <a data-toggle="tab" data-target="#sixth" href="#sixth">Hari 6</a>
                         </li>
-                        <li class="py-[7px] px-[30px] rounded-[5px] text-[#94ABD0]">
+                        <li class="py-[7px] px-[15px] md:px-[20px] lg:px-[30px] rounded-[5px] text-[#94ABD0]">
                             <a data-toggle="tab" data-target="#seventh" href="#seventh">Hari 7</a>
                         </li>
-                        <li class="py-[7px] px-[30px] rounded-[5px] text-[#94ABD0]">
+                        <li class="py-[7px] px-[15px] md:px-[20px] lg:px-[30px] rounded-[5px] text-[#94ABD0]">
                             <a data-toggle="tab" data-target="#eighth" href="#eighth">Hari 8</a>
                         </li>
                     </ul>
                 </div>
                 <div id = "tab-contents2" class = "p-[10px]">
-                    <div class="tab-pane active" id = "first">
-                        <canvas id = "data2-chart-1" width="1000" height="300"></canvas>
+                    <div class="tab-pane active " id = "first">
+                        <div class="w-[80vw] h-[70vh] m-auto">
+                            <canvas id = "data2-chart-1"></canvas>
+                        </div>
                         <button onclick = "resetZoomChart1()" class="mt-[15px] bg-blue_bgnavbase rounded-[7px] border-[#C9D9F4] border-[2px] focus:border-[#94ABD0] font-inter font-medium text-[15px] text-[#94ABD0] px-[15px] py-[5px]">
                             Reset
                         </button>
                     </div>
                     <div class="hidden tab-pane" id = "second">
-                        <canvas id = "data2-chart-2" width="1000" height="300"></canvas>
+                        <div class="w-[80vw] h-[70vh] m-auto">
+                            <canvas id = "data2-chart-2"></canvas>
+                        </div>
                         <button onclick = "resetZoomChart2()" class="mt-[15px] bg-blue_bgnavbase rounded-[7px] border-[#C9D9F4] border-[2px] focus:border-[#94ABD0] font-inter font-medium text-[15px] text-[#94ABD0] px-[15px] py-[5px]">
                             Reset
                         </button>
                     </div>
                     <div class="hidden tab-pane" id = "third">
-                        <canvas id = "data2-chart-3" width="1000" height="300"></canvas>
+                        <div class="w-[80vw] h-[70vh] m-auto">
+                            <canvas id = "data2-chart-3"></canvas>
+                        </div>
                         <button onclick = "resetZoomChart3()" class="mt-[15px] bg-blue_bgnavbase rounded-[7px] border-[#C9D9F4] border-[2px] focus:border-[#94ABD0] font-inter font-medium text-[15px] text-[#94ABD0] px-[15px] py-[5px]">
                             Reset
                         </button>
                     </div>
                     <div class="hidden tab-pane" id = "fourth">
-                        <canvas id = "data2-chart-4" width="1000" height="300"></canvas>
+                        <div class="w-[80vw] h-[70vh] m-auto">
+                            <canvas id = "data2-chart-4"></canvas>
+                        </div>
                         <button onclick = "resetZoomChart4()" class="mt-[15px] bg-blue_bgnavbase rounded-[7px] border-[#C9D9F4] border-[2px] focus:border-[#94ABD0] font-inter font-medium text-[15px] text-[#94ABD0] px-[15px] py-[5px]">
                             Reset
                         </button>
                     </div>
                     <div class="hidden tab-pane" id = "fifth">
-                        <canvas id = "data2-chart-5" width="1000" height="300"></canvas>
+                        <div class="w-[80vw] h-[70vh] m-auto">
+                            <canvas id = "data2-chart-5"></canvas>
+                        </div>
                         <button onclick = "resetZoomChart5()" class="mt-[15px] bg-blue_bgnavbase rounded-[7px] border-[#C9D9F4] border-[2px] focus:border-[#94ABD0] font-inter font-medium text-[15px] text-[#94ABD0] px-[15px] py-[5px]">
                             Reset
                         </button>
                     </div>
                     <div class="hidden tab-pane" id = "sixth">
-                        <canvas id = "data2-chart-6" width="1000" height="300"></canvas>
+                        <div class="w-[80vw] h-[70vh] m-auto">
+                            <canvas id = "data2-chart-6"></canvas>
+                        </div>
                         <button onclick = "resetZoomChart6()" class="mt-[15px] bg-blue_bgnavbase rounded-[7px] border-[#C9D9F4] border-[2px] focus:border-[#94ABD0] font-inter font-medium text-[15px] text-[#94ABD0] px-[15px] py-[5px]">
                             Reset
                         </button>
                     </div>
                     <div class="hidden tab-pane" id = "seventh">
-                        <canvas id = "data2-chart-7" width="1000" height="300"></canvas>
+                        <div class="w-[80vw] h-[70vh] m-auto">
+                            <canvas id = "data2-chart-7"></canvas>
+                        </div>
                         <button onclick = "resetZoomChart7()" class="mt-[15px] bg-blue_bgnavbase rounded-[7px] border-[#C9D9F4] border-[2px] focus:border-[#94ABD0] font-inter font-medium text-[15px] text-[#94ABD0] px-[15px] py-[5px]">
                             Reset
                         </button>
                     </div>
                     <div class="hidden tab-pane" id = "eighth">
-                        <canvas id = "data2-chart-8" width="1000" height="300"></canvas>
-                        <button onclick = "resetZoomChart8()" class="float-left mt-[15px] bg-blue_bgnavbase rounded-[7px] border-[#C9D9F4] border-[2px] focus:border-[#94ABD0] font-inter font-medium text-[15px] text-[#94ABD0] px-[15px] py-[5px]">
+                        <div class="w-[80vw] h-[70vh] m-auto">
+                            <canvas id = "data2-chart-8"></canvas>
+                        </div>
+                        <button onclick = "resetZoomChart8()" class="mt-[15px] bg-blue_bgnavbase rounded-[7px] border-[#C9D9F4] border-[2px] focus:border-[#94ABD0] font-inter font-medium text-[15px] text-[#94ABD0] px-[15px] py-[5px]">
                             Reset
                         </button>
                     </div>
@@ -109,6 +170,7 @@
 
     const chartOptions2 = {
         responsive: true,
+        maintainAspectRatio: false,
         indexAxis: 'x',
         elements: {
             bar: {
