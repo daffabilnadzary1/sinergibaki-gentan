@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .chartMenu {
+        @apply w-full h-[40px] bg-[#background: #1A1A1A];
+    }
+      
+    .chartMenu p {
+        @apply p-[10px] text-[20px];
+    }
+      
+    .chartCard {
+        @apply w-full h-full bg-[#FFFFFF] flex align-center justify-center;
+    }
+      
+    .chartBox {
+        @apply w-[700px] p-[20px] rounded-[20px] border-[3px] border-[#24AD23] bg-white;
+    }
+
+    .button {
+        @apply px-4 py-2 font-medium tracking-wide rounded-md shadow-sm lg:px-8;
+    }
+
+    .button--action {
+        @apply bg-indigo-300 text-indigo-800 hover:bg-indigo-200;
+    }
+};
